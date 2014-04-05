@@ -128,6 +128,10 @@ table {
 }
 /** VARS **/
 /** MAIN STYLES **/
+@font-face {
+  font-family: Vijaya;
+  src: url(Vijaya.ttf);
+}
 div,
 section,
 header,
@@ -152,6 +156,7 @@ body {
   width: 1024px;
   height: auto;
   margin: 0 auto;
+  font-size: 16px;
 }
 body #wrapper {
   background: url('../img/bg.jpg') no-repeat center center;
@@ -166,22 +171,42 @@ body #wrapper header .contact {
   float: right;
   border-left: 1px solid #ececec;
   width: 422.5px;
-  height: 200px;
+  height: auto;
   outline: none;
+  text-align: center;
+  margin-top: 40px;
+  font-family: Vijaya;
+  font-size: 1.75em;
+  color: #434343;
+}
+body #wrapper header .contact p {
+  padding: 3px;
 }
 body #wrapper nav {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight: 700;
   height: 50px;
-  background-color: #fff;
+  background-color: #e4e4e4;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+body #wrapper nav ul {
+  text-align: center;
 }
 body #wrapper nav ul li {
   display: inline-block;
   text-transform: uppercase;
-  margin-left: 130px;
-  margin-right: 100px;
   height: 50px;
   line-height: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+body #wrapper nav ul li a {
+  color: #5d5d5d;
+  transition: all 0.3s;
+}
+body #wrapper nav ul li a:hover {
+  color: #a09622;
 }
 body #wrapper #main {
   min-height: 425px;
@@ -192,6 +217,20 @@ body #wrapper #main .content {
   height: 425px;
   background-color: #f7f7f7;
   float: left;
+  position: relative;
+}
+body #wrapper #main .content .slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  padding: 10px 0;
+  background-color: #666;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 body #wrapper #main .info {
   width: 320px;
@@ -202,6 +241,11 @@ body #wrapper #main .info {
 body #wrapper #main .info.info2 {
   height: 220px;
   margin-top: 15px;
+  text-align: center;
+}
+body #wrapper #main .info.info2 img {
+  max-width: 100%;
+  max-height: 100%;
 }
 body #wrapper footer {
   min-height: 120px;

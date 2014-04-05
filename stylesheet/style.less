@@ -2,8 +2,14 @@
 
 /** VARS **/
 @main-width: 845px;
+@calibri: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 
 /** MAIN STYLES **/
+
+@font-face {
+    font-family: Vijaya;
+    src: url(Vijaya.ttf);
+}
 
 div, section, header, nav, footer, span, ul {
     outline: 1px solid blue;   
@@ -23,6 +29,7 @@ body {
     width: 1024px;
     height: auto;
     margin: 0 auto;
+    font-size: 16px;
     
     #wrapper {
         background: url('../img/bg.jpg') no-repeat center center;
@@ -37,35 +44,76 @@ body {
                 float: right;
                 border-left: 1px solid #ececec;
                 width: (@main-width / 2);
-                height: 200px;
+                height: auto;
                 outline: none;
+                text-align: center;
+                margin-top: 40px;
+                font-family: Vijaya;
+                font-size: 1.75em;
+                color: #434343;
+                
+                p {
+                    padding: 3px;  
+                }
             }
         }
         nav {
+            font-family: @calibri;
+            font-weight: 700;
             height: 50px;
-            background-color: #fff;
+            background-color: #e4e4e4;
             margin-top: 20px;
             margin-bottom: 20px;
             
-            ul li {
-                display: inline-block;
-                text-transform: uppercase;
-                margin-left: 130px;
-                margin-right: 100px;
-                height: 50px;
-                line-height: 50px;
+            ul {
+                text-align: center; 
+                
+                li {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-right: 100px;
+                    margin-left: 100px;
+                
+                    a {
+                        color: #5d5d5d;
+                        transition: all 0.3s;
+                        
+                        &:hover {
+                           color: #a09622; 
+                        }
+                    }
+                }
             }
         }
         
         #main {
             min-height: 425px;
             width: 845px;
+            
             .content {
                 width: 500px;
                 height: 425px;
                 background-color: #f7f7f7;
                 float: left;
+                position: relative;
+                
+                .slogan {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: inherit;
+                    padding: 10px 0;
+                    background-color: #666;
+                    color: #fff;
+                    opacity: 0.5;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-family: @calibri;
+                }
             }
+            
             .info {
                 width: 320px;
                 height: 190px;
@@ -75,6 +123,12 @@ body {
                 &.info2 {
                     height: 220px;
                     margin-top: 15px;
+                    text-align: center;
+                    
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
                 }
             }
         }
