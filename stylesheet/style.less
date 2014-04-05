@@ -45,6 +45,7 @@ body {
             height: 50px;
             background-color: #fff;
             margin-top: 20px;
+            margin-bottom: 20px;
             
             ul li {
                 display: inline-block;
@@ -54,6 +55,35 @@ body {
                 height: 50px;
                 line-height: 50px;
             }
+        }
+        
+        #main {
+            min-height: 425px;
+            width: 845px;
+            .content {
+                width: 500px;
+                height: 425px;
+                background-color: #f7f7f7;
+                float: left;
+            }
+            .info {
+                width: 320px;
+                height: 190px;
+                float: right;
+                background-color: #f7f7f7;
+            
+                &.info2 {
+                    height: 220px;
+                    margin-top: 15px;
+                }
+            }
+        }
+        
+        footer {
+            min-height: 120px;
+            width: @main-width;
+            margin-top: 25px;
+            background-color: #f7f7f7;
         }
     }
 }
