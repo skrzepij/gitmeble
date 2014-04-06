@@ -4,17 +4,25 @@
 @main-width: 845px;
 @calibri: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 
+.hover {
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+}
+.active {
+    font-weight: 700;
+}
+
 /** MAIN STYLES **/
 
 @font-face {
     font-family: Vijaya;
-    src: url(Vijaya.ttf);
+    src: url('../Vijaya.ttf');
 }
-
+/*
 div, section, header, nav, footer, span, ul {
     outline: 1px solid blue;   
 }
-
+*/
 a {
     color: #000;
     text-decoration: none;
@@ -38,7 +46,7 @@ body {
         header {
             background: url('../img/logo.png') #f7f7f7 no-repeat 100px center;
             height: 200px;
-            box-shadow: inset  0px 0px 200px #ddd;
+            box-shadow: inset  0px 0px 200px #ddd, 2px 2px 10px #555;
             
             .contact {
                 float: right;
@@ -64,6 +72,7 @@ body {
             background-color: #e4e4e4;
             margin-top: 20px;
             margin-bottom: 20px;
+            box-shadow: 2px 2px 10px #555;
             
             ul {
                 text-align: center; 
@@ -98,6 +107,7 @@ body {
                 background-color: #f7f7f7;
                 float: left;
                 position: relative;
+                box-shadow: 2px 2px 10px #555;
                 
                 .slogan {
                     position: absolute;
@@ -105,12 +115,12 @@ body {
                     left: 0;
                     width: inherit;
                     padding: 10px 0;
-                    background-color: #666;
+                    background-color: rgba(102, 102, 102, .75);
                     color: #fff;
-                    opacity: 0.5;
                     text-align: center;
                     text-transform: uppercase;
                     font-family: @calibri;
+                    z-index: 10;
                 }
             }
             
@@ -119,6 +129,7 @@ body {
                 height: 190px;
                 float: right;
                 background-color: #f7f7f7;
+                box-shadow: inset 0px 0px 200px #ddd, 2px 2px 10px #555;
             
                 &.info2 {
                     height: 220px;
@@ -138,6 +149,25 @@ body {
             width: @main-width;
             margin-top: 25px;
             background-color: #f7f7f7;
+            text-align: center;
+            box-shadow: inset 0px 0px 200px #ddd, 2px 2px 10px #555;;
+            
+            ul {  
+                padding-top: 20px;
+                
+                li {
+                    display: inline-block; 
+                    padding: 5px 2px;
+                    margin: 0 10px;
+                    font-family: @calibri;  
+                    border-bottom: 1px solid #f7f7f7;
+                    transition: border .3s;
+                    
+                    &:hover {
+                        .hover;
+                    }
+                }
+            }
         }
     }
 }
