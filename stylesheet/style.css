@@ -244,12 +244,39 @@ body #wrapper #main .info {
   background-color: #f7f7f7;
   box-shadow: 2px 2px 10px #555;
 }
+body #wrapper #main .info.about h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 5px;
+  padding-bottom: 0px;
+  text-transform: uppercase;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  text-align: center;
+}
+body #wrapper #main .info.about p {
+  font-family: Vijaya;
+  padding: 5px 10px;
+  text-align: justify;
+}
+body #wrapper #main .info.about p:last-child {
+  padding-top: 0;
+  text-align: right;
+}
+body #wrapper #main .info.about p span {
+  text-decoration: underline;
+}
 body #wrapper #main .info.map {
   height: 220px;
   margin-top: 15px;
   text-align: center;
   background: url('../img/map.png') #f7f7f7 no-repeat center top;
   background-size: contain;
+  position: relative;
+}
+body #wrapper #main .info.map .city {
+  position: absolute;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 0.6em;
 }
 body #wrapper #main .info.map .current {
   text-align: center;
@@ -262,6 +289,64 @@ body #wrapper #main .info.map .current {
   font-size: 3em;
   padding: 80px 0px;
   margin-left: 10px;
+  position: relative;
+}
+body #wrapper #main .info.map #katowice {
+  top: 100px;
+  left: 150px;
+}
+body #wrapper #main .info.map #gliwice {
+  top: 105px;
+  left: 95px;
+}
+body #wrapper #main .info.map #zabrze {
+  top: 95px;
+  left: 100px;
+}
+body #wrapper #main .info.map #bytom {
+  top: 90px;
+  left: 125px;
+}
+body #wrapper #main .info.map #chorzow {
+  top: 95px;
+  left: 135px;
+}
+body #wrapper #main .info.map #ruda {
+  top: 110px;
+  left: 125px;
+}
+body #wrapper #main .info.map #bedzin {
+  top: 93px;
+  left: 177px;
+}
+body #wrapper #main .info.map #sosnowiec {
+  top: 110px;
+  left: 180px;
+}
+body #wrapper #main .info.map #tarnowskie {
+  top: 80px;
+  left: 150px;
+}
+body #wrapper #main .info.map #rybnik {
+  top: 125px;
+  left: 90px;
+}
+body #wrapper #main .info.map #knurow {
+  top: 117px;
+  left: 97px;
+  font-size: 0.5em;
+}
+body #wrapper #main .info.map #tychy {
+  top: 120px;
+  left: 170px;
+}
+body #wrapper #main .info.map #dabrowa {
+  top: 95px;
+  left: 180px;
+}
+body #wrapper #main .info.map #myslowice {
+  top: 103px;
+  left: 180px;
 }
 body #wrapper #main .info.map img {
   max-width: 100%;
@@ -289,4 +374,8 @@ body #wrapper footer ul li {
 body #wrapper footer ul li:hover {
   border-bottom: 1px solid #000;
   padding-bottom: 4px;
+}
+body #wrapper footer .autor {
+  text-align: center;
+  visibility: hidden;
 }
