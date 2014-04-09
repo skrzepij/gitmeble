@@ -134,6 +134,16 @@ table {
 .active {
   font-weight: 700;
 }
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
 /** MAIN STYLES **/
 @font-face {
   font-family: Vijaya;
@@ -169,6 +179,22 @@ body #wrapper header {
   background: url('../img/logo.png') #f7f7f7 no-repeat 100px center;
   height: 200px;
   box-shadow: inset  0px 0px 200px #ddd, 2px 2px 10px #555;
+}
+body #wrapper header:before,
+body #wrapper header:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+body #wrapper header:after {
+  clear: both;
+}
+body #wrapper header a {
+  display: block;
+  float: left;
+  width: 420.5px;
+  height: 100%;
 }
 body #wrapper header .contact {
   float: right;
@@ -216,6 +242,16 @@ body #wrapper #main {
   min-height: 425px;
   width: 845px;
 }
+body #wrapper #main:before,
+body #wrapper #main:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+body #wrapper #main:after {
+  clear: both;
+}
 body #wrapper #main .content {
   width: 500px;
   height: 425px;
@@ -231,9 +267,10 @@ body #wrapper #main .content .slogan {
   width: inherit;
   padding: 10px 0;
   background-color: rgba(102, 102, 102, 0.75);
-  color: #fff;
+  color: #c1c04d;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 700;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   z-index: 10;
 }
@@ -269,14 +306,18 @@ body #wrapper #main .info.map {
   height: 220px;
   margin-top: 15px;
   text-align: center;
-  background: url('../img/map.png') #f7f7f7 no-repeat center top;
-  background-size: contain;
+  background: url('../img/map.png') #f7f7f7 no-repeat center -30px;
+  background-size: 246px 335px;
   position: relative;
 }
 body #wrapper #main .info.map .city {
   position: absolute;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  font-size: 0.6em;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+body #wrapper #main .info.map .city:hover {
+  text-decoration: underline;
 }
 body #wrapper #main .info.map .current {
   text-align: center;
@@ -291,62 +332,83 @@ body #wrapper #main .info.map .current {
   margin-left: 10px;
   position: relative;
 }
+body #wrapper #main .info.map #slask {
+  display: none;
+}
 body #wrapper #main .info.map #katowice {
-  top: 100px;
-  left: 150px;
+  top: 110px;
+  left: 140px;
 }
 body #wrapper #main .info.map #gliwice {
-  top: 105px;
-  left: 95px;
+  top: 95px;
+  left: 90px;
 }
 body #wrapper #main .info.map #zabrze {
-  top: 95px;
-  left: 100px;
+  top: 80px;
+  left: 112px;
 }
 body #wrapper #main .info.map #bytom {
-  top: 90px;
-  left: 125px;
+  top: 45px;
+  left: 130px;
 }
 body #wrapper #main .info.map #chorzow {
-  top: 95px;
-  left: 135px;
+  top: 58px;
+  left: 170px;
 }
 body #wrapper #main .info.map #ruda {
-  top: 110px;
-  left: 125px;
+  top: 75px;
+  left: 160px;
 }
 body #wrapper #main .info.map #bedzin {
   top: 93px;
   left: 177px;
 }
 body #wrapper #main .info.map #sosnowiec {
-  top: 110px;
-  left: 180px;
+  top: 104px;
+  left: 200px;
 }
 body #wrapper #main .info.map #tarnowskie {
-  top: 80px;
-  left: 150px;
+  top: 10px;
+  left: 55px;
+}
+body #wrapper #main .info.map #piekary {
+  top: 25px;
+  left: 110px;
 }
 body #wrapper #main .info.map #rybnik {
-  top: 125px;
-  left: 90px;
+  top: 165px;
+  left: 50px;
+}
+body #wrapper #main .info.map #zory {
+  top: 170px;
+  left: 95px;
 }
 body #wrapper #main .info.map #knurow {
-  top: 117px;
-  left: 97px;
-  font-size: 0.5em;
+  top: 125px;
+  left: 80px;
 }
 body #wrapper #main .info.map #tychy {
-  top: 120px;
+  top: 165px;
   left: 170px;
 }
 body #wrapper #main .info.map #dabrowa {
-  top: 95px;
-  left: 180px;
+  top: 40px;
+  left: 215px;
 }
 body #wrapper #main .info.map #myslowice {
-  top: 103px;
-  left: 180px;
+  top: 140px;
+  left: 160px;
+}
+body #wrapper #main .info.map #jaworzno {
+  top: 125px;
+  left: 187px;
+}
+body #wrapper #main .info.map #mikolow {
+  top: 150px;
+  left: 110px;
+}
+body #wrapper #main .info.map #pyskowice {
+  display: none;
 }
 body #wrapper #main .info.map img {
   max-width: 100%;
@@ -378,4 +440,57 @@ body #wrapper footer ul li:hover {
 body #wrapper footer .autor {
   text-align: center;
   visibility: hidden;
+}
+/** == SZAFY == **/
+#main .szafy {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  text-align: justify;
+  overflow-y: auto;
+}
+#main .szafy p,
+#main .szafy h5 {
+  padding: 5px;
+}
+#main .gallery {
+  width: 320px;
+  height: 425px;
+  float: right;
+  background-color: #f7f7f7;
+  box-shadow: 2px 2px 10px #555;
+  text-align: center;
+}
+#main .gallery a {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  background-color: #ccc;
+  overflow: hidden;
+  margin: 5px;
+  position: relative;
+}
+#main .gallery a:before {
+  content: '';
+  display: block;
+  background-color: transparent;
+  color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 0.8em;
+  transition: all .5s;
+}
+#main .gallery a:hover:before {
+  content: 'powiększ';
+  background-color: rgba(50, 50, 50, 0.8);
+  color: #c1c04d;
+  padding-top: 30px;
+}
+#main .gallery a .landscape {
+  max-height: 100%;
+  width: auto;
+}
+#main .gallery a .portrait {
+  max-width: 100%;
+  height: auto;
 }

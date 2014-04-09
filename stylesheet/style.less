@@ -12,6 +12,19 @@
     font-weight: 700;
 }
 
+.cf {
+    
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
 /** MAIN STYLES **/
 
 @font-face {
@@ -47,7 +60,14 @@ body {
             background: url('../img/logo.png') #f7f7f7 no-repeat 100px center;
             height: 200px;
             box-shadow: inset  0px 0px 200px #ddd, 2px 2px 10px #555;
+            .cf;
             
+            a {
+                display: block;
+                float: left;
+                width: ((@main-width / 2)-2px);
+                height: 100%;
+            }
             .contact {
                 float: right;
                 border-left: 1px solid #ececec;
@@ -100,6 +120,7 @@ body {
         #main {
             min-height: 425px;
             width: 845px;
+            .cf;
             
             .content {
                 width: 500px;
@@ -116,9 +137,10 @@ body {
                     width: inherit;
                     padding: 10px 0;
                     background-color: rgba(102, 102, 102, .75);
-                    color: #fff;
+                    color: #c1c04d;
                     text-align: center;
                     text-transform: uppercase;
+                    font-weight: 700;
                     font-family: @calibri;
                     z-index: 10;
                 }
@@ -167,15 +189,18 @@ body {
                     height: 220px;
                     margin-top: 15px;
                     text-align: center;
-                    background: url('../img/map.png') #f7f7f7 no-repeat center top;
-                    background-size: contain;
+                    background: url('../img/map.png') #f7f7f7 no-repeat center -30px;
+                    background-size: 246px 335px;
                     position: relative;
                     
                     .city {
                         position: absolute;   
                         font-family: @calibri;
-                        font-size: 0.6em;
-                        
+                        font-size: 0.8em;
+                        font-weight: 700;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                     
                                         
@@ -193,62 +218,84 @@ body {
                         position: relative;
                     }
                     
+                    #slask {
+                        display: none;
+                    }
+                    
                     #katowice {
-                        top: 100px;
-                        left: 150px;
+                        top: 110px;
+                        left: 140px;
                     }
                     #gliwice {
-                        top: 105px;
-                        left: 95px;
+                        top: 95px;
+                        left: 90px;
                     }
                     #zabrze {
-                        top: 95px;
-                        left: 100px;
+                        top: 80px;
+                        left: 112px;
                     }
                     #bytom {
-                        top: 90px;
-                        left: 125px;
+                        top: 45px;
+                        left: 130px;
                     }
                     #chorzow {
-                        top: 95px;
-                        left: 135px;
+                        top: 58px;
+                        left: 170px;
                     }
                     #ruda {
-                        top: 110px;
-                        left: 125px;
+                        top: 75px;
+                        left: 160px;
                     }
                     #bedzin {
                         top: 93px;
                         left: 177px;
                     }
                     #sosnowiec {
-                        top: 110px;
-                        left: 180px;
+                        top: 104px;
+                        left: 200px;
                     }
                     #tarnowskie {
-                        top: 80px;
-                        left: 150px;
+                        top: 10px;
+                        left: 55px;
+                    }
+                    #piekary {
+                        top: 25px;
+                        left: 110px;
                     }
                     #rybnik {
-                        top: 125px;
-                        left: 90px;
+                        top: 165px;
+                        left: 50px;
+                    }
+                    #zory {
+                        top: 170px;
+                        left: 95px;
                     }
                     #knurow {
-                        top: 117px;
-                        left: 97px;
-                        font-size: 0.5em;
+                        top: 125px;
+                        left: 80px;
                     }
                     #tychy {
-                        top: 120px;
+                        top: 165px;
                         left: 170px;
                     }
                     #dabrowa {
-                        top: 95px;
-                        left: 180px
+                        top: 40px;
+                        left: 215px
                     }
                     #myslowice {
-                        top: 103px;
-                        left: 180px
+                        top: 140px;
+                        left: 160px
+                    }
+                    #jaworzno {
+                        top: 125px;
+                        left: 187px;
+                    }
+                    #mikolow {
+                        top: 150px;
+                        left: 110px
+                    }
+                    #pyskowice {
+                      display: none;  
                     }
                     
                     img {
@@ -290,4 +337,71 @@ body {
         }
     }
 }
+
+
+/** == SZAFY == **/
+
+#main {
+    
+    .szafy {
+        font-family: @calibri;
+        text-align: justify;
+        overflow-y: auto;
+        
+        p, h5 {
+            padding: 5px;
+        }
+    }
+    
+    .gallery {
+        width: 320px;
+        height: 425px;
+        float: right;
+        background-color: #f7f7f7;
+        box-shadow: 2px 2px 10px #555;
+        text-align: center;
+        
+        
+        a {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            background-color: #ccc;
+            overflow: hidden;
+            margin: 5px;
+            position: relative;
+            
+            &:before {
+                content: '';
+                display: block;
+                background-color: transparent;
+                color: transparent;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                font-family: @calibri;
+                font-size: 0.8em;
+                transition: all .5s;
+            }
+            
+            &:hover:before {
+                content: 'powiększ';
+                background-color: rgba(50, 50, 50, .8); 
+                color: #c1c04d;
+                padding-top: 30px;
+            }
+            
+            .landscape {
+                max-height: 100%;
+                width: auto;
+            }
+            
+            .portrait {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
 
