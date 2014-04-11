@@ -8,7 +8,7 @@ $(function(){
        captions: true,
        auto: true
    });
-    
+    /**
     $('.gallery').magnificPopup({
         delegate: 'a',
 		type: 'image',
@@ -26,5 +26,5 @@ $(function(){
 			}
 		}
     });
-    
+    **/
 });

@@ -442,14 +442,39 @@ body #wrapper footer .autor {
   visibility: hidden;
 }
 /** == SZAFY == **/
-#main .szafy {
+#main .content.szafy {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   text-align: justify;
   overflow-y: auto;
 }
-#main .szafy p,
-#main .szafy h5 {
-  padding: 5px;
+#main .content.szafy h2 {
+  font-size: 2em;
+  font-family: Vijaya;
+  font-weight: 700;
+  border-bottom: 1px solid #c1c04d;
+  margin: 5px 0;
+  text-align: center;
+}
+#main .content.szafy p {
+  padding: 5px 8px;
+}
+#main .content.szafy p.contactInfo {
+  text-align: center;
+}
+#main .content.szafy p span:first-child {
+  margin-right: 40px;
+}
+#main .content.szafy p a {
+  color: #c1c04d;
+  text-decoration: underline;
+}
+#main .content.szafy h5 {
+  padding-left: 5px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+#main .content.szafy h5:last-of-type {
+  text-align: center;
 }
 #main .gallery {
   width: 320px;
@@ -465,7 +490,7 @@ body #wrapper footer .autor {
   height: 75px;
   background-color: #ccc;
   overflow: hidden;
-  margin: 5px;
+  margin: 20px 7px 0;
   position: relative;
 }
 #main .gallery a:before {
