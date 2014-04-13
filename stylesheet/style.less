@@ -6,10 +6,28 @@
 
 .hover {
     border-bottom: 1px solid #000;
-    padding-bottom: 4px;
+    padding-bottom: 1px;
 }
-.active {
+
+.bold {
     font-weight: 700;
+}
+              
+.current {
+    color: #222;
+    text-transform: uppercase;
+    .bold;
+    .hover;
+}
+
+.landscape {
+    max-height: 100%;
+    width: auto;
+}
+            
+.portrait {
+    max-width: 100%;
+    height: auto;
 }
 
 .cf {
@@ -162,6 +180,7 @@ body {
                         padding-bottom: 0px;
                         text-transform: uppercase;
                         font-family: @calibri;
+                        letter-spacing: 5px;
                         text-align: center;
                     }
                     
@@ -192,30 +211,31 @@ body {
                     background: url('../img/map.png') #f7f7f7 no-repeat center -30px;
                     background-size: 246px 335px;
                     position: relative;
+                    cursor: crosshair;
                     
                     .city {
                         position: absolute;   
                         font-family: @calibri;
                         font-size: 0.8em;
-                        font-weight: 700;
+                        border-bottom: 1px solid transparent;
+                        transition: border-bottom 0.3s;
+                        
                         &:hover {
-                            text-decoration: underline;
+                            .hover
+                            
                         }
-                    }
-                    
-                                        
-                    .current {
-                        text-align: center;
-                        text-transform: uppercase;
-                        font-family: @calibri;
-                        font-weight: 700;
-                        letter-spacing: 20px;
-                        color: #5d5d5d;
-                        display: inline-block;
-                        font-size: 3em;
-                        padding: 80px 0px;
-                        margin-left: 10px;
-                        position: relative;
+                        
+                        &.current {
+                            margin-left: -3px;
+                            padding: 1px;
+                            background-color: #c1c04d;
+                            z-index: 66;
+                            
+                            &:before {
+                                content: '\00b7';
+                                padding-right: 2px;
+                            }
+                        }
                     }
                     
                     #slask {
@@ -319,7 +339,7 @@ body {
                 
                 li {
                     display: inline-block; 
-                    padding: 5px 2px;
+                    padding: 5px 2px 2px 2px;
                     margin: 0 10px;
                     font-family: @calibri;  
                     border-bottom: 1px solid transparent;
@@ -352,14 +372,14 @@ body {
         h2 {
             font-size: 2em;
             font-family: Vijaya;
-            .active;
+            .bold;
             border-bottom: 1px solid #c1c04d;
             margin: 5px 0;
             text-align: center;
         }
         
         p {
-            padding: 5px 8px;
+            padding: 5px 10px;
             
             &.contactInfo {
                 text-align: center;
@@ -377,7 +397,7 @@ body {
         
         h5 {
             padding-left: 5px;
-            .active;
+            .bold;
             margin-top: 10px;
             
             &:last-of-type {
@@ -423,16 +443,6 @@ body {
                 background-color: rgba(50, 50, 50, .8); 
                 color: #c1c04d;
                 padding-top: 30px;
-            }
-            
-            .landscape {
-                max-height: 100%;
-                width: auto;
-            }
-            
-            .portrait {
-                max-width: 100%;
-                height: auto;
             }
         }
     }

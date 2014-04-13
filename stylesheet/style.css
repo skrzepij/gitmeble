@@ -129,10 +129,25 @@ table {
 /** VARS **/
 .hover {
   border-bottom: 1px solid #000;
-  padding-bottom: 4px;
+  padding-bottom: 1px;
 }
-.active {
+.bold {
   font-weight: 700;
+}
+.current {
+  color: #222;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
+}
+.landscape {
+  max-height: 100%;
+  width: auto;
+}
+.portrait {
+  max-width: 100%;
+  height: auto;
 }
 .cf:before,
 .cf:after {
@@ -288,6 +303,7 @@ body #wrapper #main .info.about h2 {
   padding-bottom: 0px;
   text-transform: uppercase;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  letter-spacing: 5px;
   text-align: center;
 }
 body #wrapper #main .info.about p {
@@ -309,28 +325,28 @@ body #wrapper #main .info.map {
   background: url('../img/map.png') #f7f7f7 no-repeat center -30px;
   background-size: 246px 335px;
   position: relative;
+  cursor: crosshair;
 }
 body #wrapper #main .info.map .city {
   position: absolute;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 0.8em;
-  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s;
 }
 body #wrapper #main .info.map .city:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
 }
-body #wrapper #main .info.map .current {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 20px;
-  color: #5d5d5d;
-  display: inline-block;
-  font-size: 3em;
-  padding: 80px 0px;
-  margin-left: 10px;
-  position: relative;
+body #wrapper #main .info.map .city.current {
+  margin-left: -3px;
+  padding: 1px;
+  background-color: #c1c04d;
+  z-index: 66;
+}
+body #wrapper #main .info.map .city.current:before {
+  content: '\00b7';
+  padding-right: 2px;
 }
 body #wrapper #main .info.map #slask {
   display: none;
@@ -427,7 +443,7 @@ body #wrapper footer ul {
 }
 body #wrapper footer ul li {
   display: inline-block;
-  padding: 5px 2px;
+  padding: 5px 2px 2px 2px;
   margin: 0 10px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   border-bottom: 1px solid transparent;
@@ -435,7 +451,7 @@ body #wrapper footer ul li {
 }
 body #wrapper footer ul li:hover {
   border-bottom: 1px solid #000;
-  padding-bottom: 4px;
+  padding-bottom: 1px;
 }
 body #wrapper footer .autor {
   text-align: center;
@@ -456,7 +472,7 @@ body #wrapper footer .autor {
   text-align: center;
 }
 #main .content.szafy p {
-  padding: 5px 8px;
+  padding: 5px 10px;
 }
 #main .content.szafy p.contactInfo {
   text-align: center;
@@ -510,12 +526,4 @@ body #wrapper footer .autor {
   background-color: rgba(50, 50, 50, 0.8);
   color: #c1c04d;
   padding-top: 30px;
-}
-#main .gallery a .landscape {
-  max-height: 100%;
-  width: auto;
-}
-#main .gallery a .portrait {
-  max-width: 100%;
-  height: auto;
 }
