@@ -14,7 +14,7 @@
 }
               
 .current {
-    color: #222;
+    color: #222 !important;
     text-transform: uppercase;
     .bold;
     .hover;
@@ -219,6 +219,7 @@ body {
                         font-size: 0.8em;
                         border-bottom: 1px solid transparent;
                         transition: border-bottom 0.3s;
+                        color: #444;
                         
                         &:hover {
                             .hover
@@ -228,7 +229,8 @@ body {
                         &.current {
                             margin-left: -3px;
                             padding: 1px;
-                            background-color: #c1c04d;
+                            //background-color: fadeOut(#c1c04d, 20%);
+                            font-size: 0.95em;
                             z-index: 66;
                             
                             &:before {

@@ -135,7 +135,7 @@ table {
   font-weight: 700;
 }
 .current {
-  color: #222;
+  color: #222 !important;
   text-transform: uppercase;
   font-weight: 700;
   border-bottom: 1px solid #000;
@@ -333,6 +333,7 @@ body #wrapper #main .info.map .city {
   font-size: 0.8em;
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.3s;
+  color: #444;
 }
 body #wrapper #main .info.map .city:hover {
   border-bottom: 1px solid #000;
@@ -341,7 +342,7 @@ body #wrapper #main .info.map .city:hover {
 body #wrapper #main .info.map .city.current {
   margin-left: -3px;
   padding: 1px;
-  background-color: #c1c04d;
+  font-size: 0.95em;
   z-index: 66;
 }
 body #wrapper #main .info.map .city.current:before {
