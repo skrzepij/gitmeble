@@ -461,7 +461,7 @@ body #wrapper footer .autor {
 #main .content.szafy {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   text-align: justify;
-  overflow-y: auto;
+  overflow-y: visible;
 }
 #main .content.szafy h2 {
   font-size: 2em;
