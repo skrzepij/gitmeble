@@ -20,6 +20,7 @@
     .hover;
 }
 
+
 .landscape {
     max-height: 100%;
     width: auto;
@@ -129,6 +130,10 @@ body {
                         
                         &:hover {
                            color: #a09622; 
+                        }
+                        
+                        &.current-menu {
+                            color: #a09622; 
                         }
                     }
                 }
@@ -369,7 +374,7 @@ body {
     .content.szafy {
         font-family: @calibri;
         text-align: justify;
-        overflow-y: visible;
+        overflow-y: auto;
         
         h2 {
             font-size: 2em;
@@ -404,6 +409,28 @@ body {
             
             &:last-of-type {
                 text-align: center;    
+            }
+        }
+        
+        .partner {
+            display: inline-block;
+            height: 50px;
+            width: 100px;
+            margin-left: 10px;
+            margin-top: 5px;
+            background-size: cover;
+            background-repeat: none;
+            background-position: center;
+            text-indent: -99999999999px;
+            
+            &.blum {
+                background-image: url('../img/blum.png');
+            }
+            &.gtv {
+                background-image: url('../img/gtv.gif');
+            }
+            &.indeco {
+                background-image: url('../img/indeco.png');
             }
         }
         
