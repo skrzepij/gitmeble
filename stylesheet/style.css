@@ -162,7 +162,9 @@ table {
 /** MAIN STYLES **/
 @font-face {
   font-family: Vijaya;
-  src: url('../Vijaya.ttf');
+  src: url('../vijaya.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ url('../Vijaya.ttf') format('truetype');
+  
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 /*
 div, section, header, nav, footer, span, ul {
@@ -514,7 +516,7 @@ body #wrapper footer .autor {
   background-image: url('../img/gtv.gif');
 }
 #main .content.szafy .partner.indeco {
-  background-image: url('../img/indeco.png');
+  background-image: url('../img/indeco.jpg');
 }
 #main .gallery {
   width: 320px;
@@ -523,14 +525,15 @@ body #wrapper footer .autor {
   background-color: #f7f7f7;
   box-shadow: 2px 2px 10px #555;
   text-align: center;
+  overflow-y: auto;
 }
 #main .gallery a {
   display: inline-block;
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   background-color: #ccc;
   overflow: hidden;
-  margin: 20px 7px 0;
+  margin: 15px 3px 0;
   position: relative;
 }
 #main .gallery a:before {
