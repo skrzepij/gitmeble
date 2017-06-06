@@ -1,7 +1,7 @@
 {
-  "name": "webpack-config-sandbox",
-  "version": "1.0.0",
-  "description": "webpack config",
+  "name": "gitmeble",
+  "version": "2.0.0",
+  "description": "new webpage for gitmeble company",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
@@ -19,8 +19,13 @@
   ],
   "author": "Radomir Skrzepij",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/upco_re/webpack#readme",
+  "homepage": "https://github.com/skrzepij/gitmeble#readme",
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
