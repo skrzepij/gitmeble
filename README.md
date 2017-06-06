@@ -1,17 +1,23 @@
-# README #
+# v2.0 #
+
+New version of the webpage.
+
+Work in progress..
 
 
+### Whats change? ###
 
-### Branches ###
+Basically - everything.
 
-* Master - Basic config 
+There are major visual changes, but I decide to use brand new project structure based on Webpack 2.
 
-PUG + SASS + JS
-
-(issue with importing sass files)
-
-
-
-* Typescript - TS config
-
-PUG + SASS + TypeScript
+Changelog in brief:
+* New project structure
+* Add Webpack 2 config
+* Add npm modules
+* Add PUG template engine
+* Change CSS preprocessor (moving from LESS to SASS)
+* Minified files on production
+* Add autoprefixer for SASS
+* Change carousel library
+* And much more..  
