@@ -1,0 +1,15 @@
+// @import "vendors/bootstrap";
+// @import "libs/_bootstrap.scss";
+
+body {
+  background-color: #4D2;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  input {
+    appearance: none;
+  }
+}
