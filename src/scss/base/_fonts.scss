@@ -1,0 +1,48 @@
+/*******
+##### FONTS
+**************/
+
+
+@mixin font-face($name, $folder) {
+    $filepath: "/src/fonts/" + $name + "/" + $folder + "/" + $name + '-' + $folder;
+    @font-face {
+        font-family: $name + '-' + $folder;
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+            url($filepath + ".woff") format('woff'),
+            url($filepath + ".ttf")  format('truetype'),
+            url($filepath + ".svg#" + $name + "") format('svg');
+    }
+}
+
+@include font-face('Vijaya', 'Regular');
+// @include font-face('HelveticaNeue', 'Roman');
+// @include font-face('HelveticaNeue', 'Bd');
+
+
+
+@mixin vijaya-regular {
+  font-family: 'Vijaya-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// @mixin font-roman {
+//   font-family: 'HelveticaNeue-Roman', "Helvetica Neue", Helvetica, sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+//
+// @mixin font-bd {
+//   font-family: 'HelveticaNeue-Bd', "Helvetica Neue", Helvetica, sans-serif;
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+
+@mixin font-italic {
+  font-style: italic;
+  li, p, strong, span {
+    font-style: italic;
+  }
+}
