@@ -67,7 +67,18 @@
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
+/* 0 */
+/* no static exports found */
+/* all exports used */
+/*!************************************!*\
+  !*** ./src/js/include/carousel.js ***!
+  \************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nmodule.exports = function () {\n  document.write(\"here will carousel script initiate\");\n};//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvaW5jbHVkZS9jYXJvdXNlbC5qcz85MGI4Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gZnVuY3Rpb24oKSB7XG4gIGRvY3VtZW50LndyaXRlKFwiaGVyZSB3aWxsIGNhcm91c2VsIHNjcmlwdCBpbml0aWF0ZVwiKTtcbn07XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gc3JjL2pzL2luY2x1ZGUvY2Fyb3VzZWwuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9");
+
+/***/ }),
 /* 1 */
 /* no static exports found */
 /* all exports used */
@@ -100,19 +111,7 @@ eval("// removed by extract-text-webpack-plugin//# sourceMappingURL=data:applica
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar libs = __webpack_require__(/*! ../scss/libs.scss */ 1);\nvar css = __webpack_require__(/*! ../scss/style.scss */ 2);\n\nvar carousel = __webpack_require__(/*! ./include/carousel.js */ 5);\ncarousel();//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvZW50cnkuanM/YjE2NSJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBsaWJzID0gcmVxdWlyZShcIi4uL3Njc3MvbGlicy5zY3NzXCIpO1xuY29uc3QgY3NzID0gcmVxdWlyZShcIi4uL3Njc3Mvc3R5bGUuc2Nzc1wiKTtcblxuXG52YXIgY2Fyb3VzZWwgPSByZXF1aXJlKFwiLi9pbmNsdWRlL2Nhcm91c2VsLmpzXCIpO1xuY2Fyb3VzZWwoKTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvanMvZW50cnkuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBRUE7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==");
-
-/***/ }),
-/* 5 */
-/* no static exports found */
-/* all exports used */
-/*!************************************!*\
-  !*** ./src/js/include/carousel.js ***!
-  \************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nmodule.exports = function () {\n  document.write(\"here will carousel script initiate\");\n};//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvaW5jbHVkZS9jYXJvdXNlbC5qcz85MGI4Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gZnVuY3Rpb24oKSB7XG4gIGRvY3VtZW50LndyaXRlKFwiaGVyZSB3aWxsIGNhcm91c2VsIHNjcmlwdCBpbml0aWF0ZVwiKTtcbn07XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gc3JjL2pzL2luY2x1ZGUvY2Fyb3VzZWwuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9");
+eval("\n\nvar libs = __webpack_require__(/*! ../scss/libs.scss */ 1);\nvar css = __webpack_require__(/*! ../scss/style.scss */ 2);\n\nvar carousel = __webpack_require__(/*! ./include/carousel.js */ 0);\ncarousel();//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvZW50cnkuanM/YjE2NSJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBsaWJzID0gcmVxdWlyZShcIi4uL3Njc3MvbGlicy5zY3NzXCIpO1xuY29uc3QgY3NzID0gcmVxdWlyZShcIi4uL3Njc3Mvc3R5bGUuc2Nzc1wiKTtcblxuXG52YXIgY2Fyb3VzZWwgPSByZXF1aXJlKFwiLi9pbmNsdWRlL2Nhcm91c2VsLmpzXCIpO1xuY2Fyb3VzZWwoKTtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvanMvZW50cnkuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBRUE7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ })
 /******/ ]);
