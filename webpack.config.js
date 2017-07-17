@@ -117,12 +117,20 @@ module.exports = {
       template: './src/views/templates/index.pug',
       favicon: './src/favicon.png'
     }),
+    // new HtmlWebpackPlugin({
+    //   title: 'Gitmeble Page1',
+    //   hash: true,
+    //   excludeChunks: ['contact'],
+    //   template: './src/views/templates/page1.pug',
+    //   filename: 'page1.html',
+    //   favicon: './src/favicon.png'
+    // }),
     new HtmlWebpackPlugin({
-      title: 'Gitmeble Page1',
+      title: "Gitmeble",
       hash: true,
       excludeChunks: ['contact'],
-      template: './src/views/templates/page1.pug',
-      filename: 'page1.html',
+      template: './src/views/templates/szafy.pug',
+      filename: 'szafy.html',
       favicon: './src/favicon.png'
     }),
     // new HtmlWebpackPlugin({
