@@ -6,7 +6,6 @@ const root = __dirname;
 
 const isProd = process.argv.indexOf('-p') !== -1; //true or false
 
-
 //Dynamic CSS config
 /////////
 const cssDev = ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'];
@@ -145,18 +144,27 @@ module.exports = {
   plugins: [
     ///HTML
     new HtmlWebpackPlugin({
-      title: 'Webpack Sandbox v1',
+      title: 'Gitmeble',
       hash: true,
       excludeChunks: ['contact'],
       template: './src/views/templates/index.pug',
       favicon: './src/favicon.png'
     }),
+
+    // new HtmlWebpackPlugin({
+    //   title: 'Gitmeble Page1',
+    //   hash: true,
+    //   excludeChunks: ['contact'],
+    //   template: './src/views/templates/page1.pug',
+    //   filename: 'page1.html',
+    //   favicon: './src/favicon.png'
+    // }),
     new HtmlWebpackPlugin({
-      title: 'Webpack Page1',
+      title: "Gitmeble",
       hash: true,
       excludeChunks: ['contact'],
-      template: './src/views/templates/page1.pug',
-      filename: 'page1.html',
+      template: './src/views/templates/szafy.pug',
+      filename: 'szafy.html',
       favicon: './src/favicon.png'
     }),
     // new HtmlWebpackPlugin({
@@ -167,7 +175,6 @@ module.exports = {
     //   template: './src/contact.html',
     //   favicon: './src/favicon.png'
     // }),
-
 
     //CSS - extract to separate file
     new ExtractTextPlugin({
@@ -200,7 +207,6 @@ module.exports = {
       //options
     }),
     //print more readable module name in the browser console on HMR update
-    new webpack.NamedModulesPlugin(),
-
+    new webpack.NamedModulesPlugin()
   ]
 };

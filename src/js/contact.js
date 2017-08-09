@@ -1,3 +1,3 @@
-console.log('contact page bundle!');
+console.warn('contact page bundle!');
 
 document.body.write('contact page bundle!');

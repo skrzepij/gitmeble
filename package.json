@@ -1,7 +1,7 @@
 {
-  "name": "webpack-config-sandbox",
-  "version": "1.0.0",
-  "description": "webpack config",
+  "name": "gitmeble",
+  "version": "2.0.0",
+  "description": "new webpage for gitmeble company",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
@@ -11,15 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/upco_re/webpack.git"
+    "url": "git+ssh://git@github.com:skrzepij/gitmeble.git"
   },
   "keywords": [
-    "webpack",
-    "config"
+    "gitmeble",
+    "meble",
+    "kuchnie",
+    "szafy",
+    "indeco"
   ],
   "author": "Radomir Skrzepij",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/upco_re/webpack#readme",
+  "homepage": "https://github.com/skrzepij/gitmeble#readme",
   "devDependencies": {
     "@types/node": "^8.0.19",
     "babel-core": "^6.24.1",
@@ -48,7 +51,8 @@
     "bootstrap-sass": "^3.3.7",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "photoswipe": "^4.1.2"
   },
   "browserslist": [
     "> 1%",

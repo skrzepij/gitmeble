@@ -1,5 +1,6 @@
 node_modules
 npm-debug.log
+<<<<<<< HEAD
 
 # Add dist folder - just for testing
 dist
@@ -10,3 +11,5 @@ dist/fonts/
 
 # Images in dist folder (hash change)
 dist/img/
+=======
+>>>>>>> 62bf808142ce9fd5dbc108b7d1f1eb3aecf05b81
