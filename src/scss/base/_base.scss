@@ -1,0 +1,65 @@
+/*******
+##### BASE
+**************/
+
+html {
+  font-size: 14px;
+
+  @media screen and ( min-width: 540px ) {
+    font-size: 15px;
+  }
+
+  @media screen and ( min-width: 991px ) {
+    font-size: 17px;
+  }
+}
+
+body {
+  @include noway-regular;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #add8e6;
+  color: $black;
+  font-size: 1rem;
+  font-weight: $normal;
+
+  overflow-x: hidden;
+
+  // background-image: url('../img/smile.svg');
+  // background-size: cover;
+
+  &.cookiePopup {
+
+  }
+}
+
+
+// HEADINGS
+////////////
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $bold;
+}
+
+h1 {
+
+}
+
+// LINKS
+////////////
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main {
+
+}
