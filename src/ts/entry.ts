@@ -4,12 +4,9 @@ import '../scss/style.scss';
 
 import 'bootstrap-sass/assets/javascripts/bootstrap.js';
 
-import content = require('../js/content.js');
+import * as carousel from "./include/carousel";
 
-console.warn('this is only a test message'); 
-
-
-content();
+carousel.test('With optional argument');
 
 
 // TURN OFF REACT FOR NOW

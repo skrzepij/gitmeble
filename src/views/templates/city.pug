@@ -1,0 +1,11 @@
+
+
+
+//- include values from external JSON
+- var cities = (require('../../data/cities.json'));
+ul
+  each val, key in values
+    li= cities[key].name
+      a(href="http://google.pl")  LINK
+    
+    //--- END of including data;

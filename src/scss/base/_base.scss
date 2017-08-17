@@ -15,18 +15,14 @@ html {
 }
 
 body {
-  @include vijaya-regular;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: #add8e6;
+
   color: $black;
   font-size: 1rem;
   font-weight: $normal;
 
   overflow-x: hidden;
-
-  // background-image: url('../img/smile.svg');
-  // background-size: cover;
 
   &.cookiePopup {
 
