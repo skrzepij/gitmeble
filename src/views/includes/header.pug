@@ -5,6 +5,7 @@
 
 //- Page header
 
+//- Header Top Bar
 .header__info
   .container-fluid.text-center
     ul.info__list.list-inline
@@ -14,5 +15,24 @@
         a(href="mailto:kontakt@gitmeble.pl" title="E-mail") kontakt@gitmeble.pl
       li.info__item.fb
         a(href="https://www.facebook.com/gitmeble/" title="Fanpage" target="_blank") facebook
+
+//- Header Banner
 .header__banner
+  a.banner__logo(href="/" title="GitMeble logo")
+    img.banner__logo__img(src="http://placehold.it/100x100")
+
+//- Header Main Nav
 .header__nav
+  .container-fluid.text-center
+    - 
+      //Define nav menu
+      var navItems = { 
+        kuchnie: "Kuchnie na wymiar", 
+        szafy: "Szafy na wymiar", 
+        indeco: "Indeco" 
+      }
+
+    .ul.nav__list.list-inline
+      each value, index in navItems
+        li.nav__item
+          a(href="/" + index + ".html")= value
