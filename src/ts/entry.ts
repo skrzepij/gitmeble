@@ -1,5 +1,5 @@
-declare var jQuery: any;
-declare var $: any;
+declare const jQuery: any;
+declare const $: any;
 
 import '../scss/libs.scss';
 import '../scss/style.scss';
