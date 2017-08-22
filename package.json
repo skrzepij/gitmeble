@@ -24,6 +24,7 @@
   "license": "ISC",
   "homepage": "https://github.com/skrzepij/gitmeble#readme",
   "devDependencies": {
+    "@types/jquery": "^3.2.12",
     "@types/node": "^8.0.19",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",

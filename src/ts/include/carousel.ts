@@ -6,6 +6,4 @@ let test = ( x?: any ) : void => {
 }
 
 
-export { 
-  test 
-}
+export { test }
