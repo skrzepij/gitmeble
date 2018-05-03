@@ -1,3 +1,135 @@
 /*******
 ##### GALLERY
 **************/
+
+.carousel__list {
+  position: relative;
+  padding: 0 25px;
+  margin: 20px 0;
+
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin: auto;
+    height: 2rem;
+    width: 20px;
+    line-height: 2rem;
+    color: $green-ugly;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: color .25s ease-in-out;
+    &:hover {
+      color: lighten($green-ugly, 10%);
+    }
+
+    &.slick-prev {
+      left: 0px;
+    }
+    &.slick-next {
+      right: 0px;
+    }
+    &.slick-disabled {
+      color: lighten($bg-gray, 10%);
+      pointer-events: none;
+    }
+
+    .fa {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.carousel__item {
+  display: inline-block;
+  padding: 0 10px;
+
+  > .carousel__item__link {
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    &::before {
+      content: '';
+      display: inline-block;
+      opacity: 0;
+      background-color: $black;
+      position: absolute;
+      bottom: -80%;
+      left: -80%;
+      width: 100%;
+      height: 100%;
+      transform: rotate(45deg);
+      transition: left .2s ease-in-out, bottom .2s ease-in-out, opacity .3s ease-in-out;
+    }
+
+    &::after {
+      content: '\f00e';
+      font-family: FontAwesome;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 1.3rem;
+      opacity: 0;
+      text-align: center;
+      transition: opacity .5s ease-in-out;
+    }
+    &:active, &:focus {
+      outline: none;
+    }
+    &:hover {
+      &::before {
+        left: -50%;
+        bottom: -50%;
+        opacity: 1;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .carousel__img {
+    min-height: 100px;
+    min-width: 100px;
+  }
+}
+
+.pswp__zoom-wrap {
+  transform: none !important;
+}
+.pswp__img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.pswp__button {
+  width: auto;
+  height: auto;
+  padding: 15px;
+
+  &.pswp__button--arrow--right, &.pswp__button--arrow--left {
+    &::before {
+      font-family: FontAwesome;
+    }
+  }
+  &.pswp__button--arrow--right {
+    &::before {
+      content: '\f061';
+    }
+  }
+  &.pswp__button--arrow--left {
+    &::before {
+      content: '\f060';
+    }
+  }
+}

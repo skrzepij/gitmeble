@@ -1,3 +1,65 @@
 /*******
 ##### FOOTER
 **************/
+
+footer {
+  background-color: transparent;
+  margin-bottom: 100px;
+}
+
+.footer__cities, .footer__brands {
+  padding: 10px;
+  background-color: $bg-gray;
+}
+
+.footer__cities {
+  &__header {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: $normal;
+  }
+  &__content {
+    width: 1800px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid $border-gray;
+  }
+}
+
+.footer__brands {
+  box-shadow: 0 5px 15px $bg-gray;
+}
+
+.footer__brands__content {
+  width: 1430px;
+  margin: 0 auto;
+  max-width: 100%;
+
+  .footer__logos__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__logo__item {
+    padding: 0 10px
+  }
+
+  img {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.footer__copyrights {
+  padding: 25px 0 15px;
+  color: $black;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  background-color: $bg-gray-lighten;
+  z-index: -10;
+}

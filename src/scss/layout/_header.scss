@@ -1,3 +1,119 @@
 /*******
 ##### HEADER
 **************/
+
+header {
+  background-color: $bg-gray;
+  position: relative;
+  z-index: 2;
+}
+
+.header__info, .header__nav {
+  @include tahoma-bold();
+}
+.info__list, .nav__list {
+  width: 1800px;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    width: 33.333%;
+  }
+}
+
+.header__info {
+  font-size: 1.5rem;
+  .info__list {
+    margin-bottom: 15px;
+    border-bottom: 2px solid $border-gray;
+  }
+  .info__item {
+    padding: 10px;
+  }
+}
+
+.header__banner {
+
+}
+
+.header__nav {
+  font-size: 1.2rem;
+  box-shadow: 0 5px 20px $black;
+  .nav__list {
+    margin-top: 15px;
+    border-top: 2px solid $border-gray;
+  }
+  .nav__item {
+    padding: 15px 10px;
+  }
+}
+
+@media screen and ( max-width: 660px ) {
+  .info__list {
+    flex-wrap: wrap;
+    .info__item {
+      &:first-of-type, &:last-of-type {
+        width: 50%;
+      }
+      &:nth-of-type(2) {
+        width: 100%;
+        order: 3;
+      }
+    }
+  }
+}
+
+@media screen and ( min-width: 900px ) {
+  .header__info {
+    font-size: 1.8rem;
+  }
+  .header__nav {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and ( min-width: 1200px ) {
+  .header__info {
+    font-size: 2.1rem;
+  }
+  .header__nav {
+    font-size: 1.5rem;
+    .nav__item {
+      a {
+        display: inline-block;
+        position: relative;
+        &::before, &::after {
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: rgba($border-gray, .6);
+          position: absolute;
+          margin: auto;
+          top: 100%;
+          transition: width .4s ease-in-out;
+        }
+        &::before {
+          left: 0px;
+          right: auto;
+        }
+        &::after {
+          left: auto;
+          right: 0px;
+        }
+        &:hover, &.active {
+          &::before, &::after {
+            width: 90%;
+          }
+        }
+        &.active {
+          color: transparentize($green-ugly, .3);
+          &::before, &::after {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,37 +2,53 @@
 //-   h1.
 //-     To jest content z includowanego pliku, z przekazaną zmienną -- #{path}
 
-
+//-------------
 //- Page header
+//--------------
+
+//- Define lists
+-
+  var infoItems = [
+    {
+      title: "Telefon",
+      url: "tel:533880880",
+      content: "533 - 880 - 880"
+    },
+    {
+      title: "E-mail",
+      url: "mailto:kontakt@gitmeble.pl",
+      content: "kontakt@gitmeble.pl"
+    },
+    {
+      title: "Fanpage",
+      url: "https://www.facebook.com/gitmeble/",
+      content: "facebook",
+      target: "_blank"
+    }
+  ]
+  var navItems = {
+    kuchnie: "Kuchnie na wymiar",
+    szafy: "Szafy na wymiar",
+    indeco: "Indeco"
+  }
 
 //- Header Top Bar
 .header__info
   .container-fluid.text-center
     ul.info__list.list-inline
-      li.info__item.phone
-        a(href="tel:533880880" title="Telefon") 533 880 880
-      li.info__item.mail
-        a(href="mailto:kontakt@gitmeble.pl" title="E-mail") kontakt@gitmeble.pl
-      li.info__item.fb
-        a(href="https://www.facebook.com/gitmeble/" title="Fanpage" target="_blank") facebook
+      each item in infoItems
+        li.info__item
+          a(href=item.url title=item.title target=item.target) #{item.content}
 
 //- Header Banner
 .header__banner
   a.banner__logo(href="/" title="GitMeble logo")
-    img.banner__logo__img(src="http://placehold.it/100x100")
+    img.banner__logo__img(src=require("../../img/bg-top.jpg") class="img-responsive")
 
 //- Header Main Nav
 .header__nav
   .container-fluid.text-center
-    - 
-      //Define nav menu
-      var navItems = { 
-        kuchnie: "Kuchnie na wymiar", 
-        szafy: "Szafy na wymiar", 
-        indeco: "Indeco" 
-      }
-
-    .ul.nav__list.list-inline
+    ul.nav__list.list-inline
       each value, index in navItems
         li.nav__item
-          a(href="/" + index + ".html")= value
+          a(href="/" + index + ".html" class=index == path ? 'active' : '')= value

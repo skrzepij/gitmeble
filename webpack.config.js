@@ -5,8 +5,35 @@ const path = require('path');
 const root = __dirname;
 const glob = require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
+// We need Nodes fs module to read directory contents
+const fs = require('fs')
 
 const isProd = process.argv.indexOf('-p') !== -1; //true or false
+
+
+// Our function that generates our html plugins
+function generateMultipleHtmlPages(templateDir) {
+  // Read files in template directory
+  const templateFiles = fs.readdirSync(path.resolve(root, templateDir));
+  return templateFiles.map(item => {
+    // Split names and extension
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    // Create new HTMLWebpackPlugin with options
+    return new HtmlWebpackPlugin({
+      title: 'Gitmeble',
+      chunks: ['app'],
+      hash: true,
+      filename: `${name}.html`,
+      template: path.resolve(root, `${templateDir}/${name}.${extension}`),
+      favicon: './src/favicon.png'
+    })
+  })
+}
+// Call our function on our views directory.
+const citiesHtmlPlugins = generateMultipleHtmlPages('./src/views/cities');
+const indecoCitiesHtmlPlugins = generateMultipleHtmlPages('./src/views/cities-indeco');
 
 /**
  * CSS config
@@ -57,32 +84,27 @@ const pluginsList = [
     favicon: './src/favicon.png'
   }),
 
-  // new HtmlWebpackPlugin({
-  //   title: 'Gitmeble Page1',
-  //   hash: true,
-  //   excludeChunks: ['contact'],
-  //   template: './src/views/templates/page1.pug',
-  //   filename: 'page1.html',
-  //   favicon: './src/favicon.png'
-  // }),
   new HtmlWebpackPlugin({
     title: 'Gitmeble',
     hash: true,
-    excludeChunks: ['contact'],
+    template: './src/views/templates/kuchnie.pug',
+    filename: 'kuchnie.html',
+    favicon: './src/favicon.png'
+  }),
+  new HtmlWebpackPlugin({
+    title: 'Gitmeble',
+    hash: true,
     template: './src/views/templates/szafy.pug',
     filename: 'szafy.html',
     favicon: './src/favicon.png'
   }),
-  // new HtmlWebpackPlugin({
-  //   title: 'Webpack Contact',
-  //   hash: true,
-  //   chunks: ['contact'],
-  //   filename: 'contact.html',
-  //   template: './src/contact.html',
-  //   favicon: './src/favicon.png'
-  // }),
-
-
+  new HtmlWebpackPlugin({
+    title: 'Gitmeble',
+    hash: true,
+    template: './src/views/templates/indeco.pug',
+    filename: 'indeco.html',
+    favicon: './src/favicon.png'
+  }),
   //CSS - extract to separate file
   new ExtractTextPlugin({
     filename: '[name].css',
@@ -106,7 +128,7 @@ const pluginsList = [
   }),
   //print more readable module name in the browser console on HMR update
   new webpack.NamedModulesPlugin(),
-];
+].concat(citiesHtmlPlugins, indecoCitiesHtmlPlugins);
 
 
 /**
@@ -136,7 +158,7 @@ if (isProd) {
 module.exports = {
   context: root,
   entry: {
-    app: './src/ts/entry.ts',         //If want to use ES6, change this path to ./src/js/entry.js
+    app: './src/js/entry.js',         //entry.js || entry.ts
     contact: './src/js/contact.js'
   },
   resolve: {
@@ -211,6 +233,7 @@ module.exports = {
               interlaced: false,
             },
             optipng: {
+              enabled: false,
               optimizationLevel: 7,
             },
             pngquant: {

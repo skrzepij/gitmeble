@@ -9,14 +9,32 @@ block vars
 block append header
   - locals.path= pageTitle;
   include ../includes/header
-  
-
 
 
 block append content
   .main__content.about
-    h2.main__header.text-uppercase
-      | O Nas
-      
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+            | O Nas
+        .main__copy.text-center
+          p
+            | Z pasji do tworzenia rzeczy nietuzinkowych, projektujemy i wykonujemy meble, w tym szafy oraz kuchnie na wymiar.
+            | Wieloletnie doświadczenie pozwala fachowo doradzić w fazie projektu, a ogromne zdolności manualne - stworzyć produkt najwyższej jakości.
+            | Nasz perfekcjonizm w tworzeniu generuje zadowolenie klienta, a wyjątkowa osobowość - pozytywne relacje.
+          p
+            | Nasze motto:
+            br
+            | "Jeżeli coś robisz, rób to najlepiej jak się da".
+          img(src=require("../../img/warehouse.jpg") class="img-responsive")
+      .col-sm-4
+        .main__map
+          img(src=require("../../img/map.png") class="img-responsive" alt="Mapa obsługiwanych miejscowości")
+
+
+
 block footer
   include ../includes/footer
+
+

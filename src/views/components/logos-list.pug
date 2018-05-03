@@ -1,0 +1,9 @@
+
+//- include values from external JSON
+- var logos = require('../../data/logos.json');
+ul.list-unstyled.footer__logos__list
+  each logo in logos
+    li.footer__logo__item
+      img(src=require("../../img/logos/" + logo.filename) alt=logo.title title=logo.title)
+
+    //--- END of including data;

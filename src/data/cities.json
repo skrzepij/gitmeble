@@ -1,18 +1,112 @@
-{
-  "1": {
-    "name": "",
-    "desc": ""
-    },
-  "2": {
-    "name":  "",
-    "desc": ""
-    },
-  "3": {
-    "name": "",
-    "desc": ""
-    },
-  "4": {
-    "name": "",
-    "desc": ""
-    }
-}
+[
+  {
+    "name": "Zabrze",
+    "desc": "",
+    "url": "zabrze"
+  },
+  {
+    "name": "Gliwice",
+    "desc": "",
+    "url": "gliwice"
+  },
+  {
+    "name": "Chorzów",
+    "desc": "",
+    "url": "chorzow"
+  },
+  {
+    "name": "Ruda Śląska",
+    "desc": "",
+    "url": "ruda-slaska"
+  },
+  {
+    "name": "Bytom",
+    "desc": "",
+    "url": "bytom"
+  },
+  {
+    "name": "Piekary Śląskie",
+    "desc": "",
+    "url": "piekary-slaskie"
+  },
+  {
+    "name": "Rybnik",
+    "desc": "",
+    "url": "rybnik"
+  },
+  {
+    "name": "Tarnowskie Góry",
+    "desc": "",
+    "url": "tarnowskie-gory"
+  },
+  {
+    "name": "Katowice",
+    "desc": "",
+    "url": "katowice"
+  },
+  {
+    "name": "Mikołów",
+    "desc": "",
+    "url": "mikolow"
+  },
+  {
+    "name": "Pyskowice",
+    "desc": "",
+    "url": "pyskowice"
+  },
+  {
+    "name": "Żory",
+    "desc": "",
+    "url": "zory"
+  },
+  {
+    "name": "Sosnowiec",
+    "desc": "",
+    "url": "sosnowiec"
+  },
+  {
+    "name": "Knurów",
+    "desc": "",
+    "url": "knurow"
+  },{
+  "name": "Tychy",
+  "desc": "",
+  "url": "tychy"
+  },
+  {
+    "name": "Jaworzno",
+    "desc": "",
+    "url": "jaworzno"
+  },
+  {
+    "name": "Mysłowice",
+    "desc": "",
+    "url": "myslowice"
+  },
+  {
+    "name": "Dąbrowa Górnicza",
+    "desc": "",
+    "url": "dabrowa-gornicza"
+  },
+  {
+    "name": "Będzin",
+    "desc": "",
+    "url": "bedzin"
+  },
+  {
+    "name": "Częstochowa",
+    "desc": "",
+    "url": "czestochowa"
+  },
+  {
+    "name": "Pszczyna",
+    "desc": "",
+    "url": "pszczyna"
+  },
+  {
+    "name": "Bielsko-Biała",
+    "desc": "",
+    "url": "bielsko-biala"
+  }
+]
+

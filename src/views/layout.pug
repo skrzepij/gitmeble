@@ -12,7 +12,7 @@ html(lang="pl")
       - var title = ""
       - var pageTitle = ""
       - var pageDesc = ""
-        
+
     //-- PAGE META
     //- defined in webpack.config.js
     title= htmlWebpackPlugin.options.title + ' - ' + title
@@ -24,29 +24,67 @@ html(lang="pl")
     +meta("company", "")
     +meta("page-topic", pageTitle)
     +meta("msapplication-tap-highlight", "no")
-    
-    
+
+
     //-- RESPONSIVE UTILITIES
     +meta("HandheldFriendly", "true")
     +meta("MobileOptimized", "320")
     +meta("viewport", "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
-      
+
     //-- FONTS
-    
-    
+
     <!--[if lt IE 9]>
       script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
       script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
     <![endif]-->
-    
+
   body
     header
       block header
-    
-    
+
+
     main.main
       .container
         block content
-    
+
+    //- Root element of PhotoSwipe. Must have class pswp.
+    .pswp(tabindex="-1" role="dialog" aria-hidden="true")
+      .pswp__bg
+
+      //- Slides wrapper with overflow:hidden.
+      .pswp__scroll-wrap
+
+        //- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory.
+        .pswp__container
+          //- don't modify these 3 pswp__item elements, data is added later on
+          .pswp__item
+          .pswp__item
+          .pswp__item
+
+        //- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.
+        .pswp__ui.pswp__ui--hidden
+          .pswp__top-bar
+            //- Controls are self-explanatory. Order can be changed.
+            .pswp__counter
+            button.pswp__button.pswp__button--close(title="Zamknij (Esc)") Zamknij
+            button.pswp__button.pswp__button--share(title="Udostępnij") Udostępnij
+            button.pswp__button.pswp__button--fs(title="Pełny ekr") Pełny ekran
+            button.pswp__button.pswp__button--zoom(title="Zoom") Zoom
+
+            //- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR
+            //- element will get class pswp__preloader--active when preloader is running
+            .pswp__preloader
+              .pswp__preloader__icn
+                .pswp__preloader__cut
+                  .pswp__preloader__donut
+
+          .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+            .pswp__share-tooltip
+
+          button.pswp__button.pswp__button--arrow--right(title="Następny (strzałka w prawo)")
+          button.pswp__button.pswp__button--arrow--left(title="Poprzedni (strzałka w lewo)")
+          .pswp__caption
+            .pswp__caption__center
+
     footer
       block footer

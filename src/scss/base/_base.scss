@@ -18,9 +18,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  color: $black;
+  @include tahoma-regular;
+
+  color: $font-gray;
   font-size: 1rem;
-  font-weight: $normal;
+  background-color: $bg-gray-lighten;
 
   overflow-x: hidden;
 
@@ -37,7 +39,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: $bold;
+  @include tahoma-bold;
 }
 
 h1 {
@@ -55,6 +57,45 @@ a:active {
   text-decoration: none;
 }
 
-.main {
+button {
+  background-color: $bg-gray;
+}
 
+.main {
+  background-image: url(../img/bg-wood.jpg);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.main__header {
+  h2 {
+    font-size: 1.2rem;
+    font-family: 'Tahoma-Regular', sans-serif;
+    font-weight: $normal;
+    margin: 10px 0 20px;
+  }
+}
+
+.main__content {
+  background-color: $bg-gray;
+  padding: 20px;
+  margin: 50px 0;
+  box-shadow: 0 5px 20px $black;
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and ( min-width: 1200px ) {
+  .main__header {
+    h2 {
+      margin: 15px 0 40px;
+    }
+  }
+  .main__content {
+    p {
+      margin-bottom: 30px;
+    }
+  }
 }

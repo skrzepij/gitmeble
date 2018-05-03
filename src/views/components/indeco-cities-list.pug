@@ -1,0 +1,9 @@
+//- include values from external JSON
+- var cities = require('../../data/cities.json');
+ul.list-unstyled.indeco__cities
+  each city, key in cities
+    li
+      a(href='/indeco-' + city.url + '.html').
+        Indeco #{cities[key].name}
+
+    //--- END of including data;

@@ -1,0 +1,10 @@
+
+//- include values from external JSON
+- var cities = require('../../data/cities.json');
+ul.list-inline.footer__cities__list
+  each city, key in cities
+    li
+      a(href='/' + city.url + '.html').
+        #{cities[key].name}
+
+    //--- END of including data;

@@ -2,37 +2,45 @@
 extends ../layout
 
 block vars
+  - var id = "szafy"
   - var title = "Szafy na wymiar"
   - var pageTitle = "Szafy na wymiar"
   - var pageDesc = "Oferujemy szafy na wymiar"
 
 block append header
-  - locals.path= pageTitle;
+  - locals.path= id;
   include ../includes/header
 
 
-
 block append content
-  h1(class="header-h1" data-attr="tested data").
-    Pug - node template engine
-  .cointainer
+  .main__content.waredrobes
     .row
-      - var cols = 0;
-      while cols < 4
-        .col-sm-3
-          p.
-            Przykładowa kolumna #{ cols + 1 }
-        - cols++;
-      
-  #container.col
-    //- include values from external JSON
-    - var values = (require('../../data/example.json'));
-    ul
-      each val, key in values
-        li= values[key].name
-    //--- END of including data;
-    
-    p.
-      Get ON!
-      
+      .col-sm-6
+        .main__header.text-uppercase.text-center
+          h2
+            | Szafy na wymiar
+        .main__copy.text-center
+          p
+            | Szafy na wymiar dolor sit amet, et at proin eget ipsum, vestibulum dignissim quis cubilia ultricies et ac,
+            | ligula dictumst facilisis nulla est vestibulum nonummy. Augue vivamus dolor nunc magna gravida ut, congue nascetur erat diam diam expedita blandit, nec nulla metus malesuada at augue sit.
+          p
+            | Posuere risus dignissim, turpis arcu leo facilisis sodales nec. Magna pulvinar sed sapien magna pellentesque,
+            | consectetuer sed molestie mauris felis a, nulla vel, porta euismod bibendum et tellus arcu pede. Eros elit a et, wisi nec suscipit sapien tincidunt a ut, ipsum ligula, placerat sit nisl ac.
+          p
+            | Curabitur neque orci, adipiscing fringilla dui, malesuada ligula maecenas et in numquam, ut ornare, quisque integer et. In quis, lorem in justo eu vestibulum rutrum, et tellus egestas nec cursus laoreet natoque.
+            | Sollicitudin vitae congue proin nulla at, hac eleifend suspendisse, neque pellentesque cras, morbi odio inceptos nullam ligula luctus adipiscing, litora a nulla.
+
+      .col-sm-6
+        .main__carousel__big
+          img(src=require("../../img/szafy/1.jpg") class="img-responsive" alt="" id="carouselBig")
+    .carousel__row
+      ul.carousel__list.list-unstyled#carouselList
+        - var n = 1
+        while n <= 25
+          li.carousel__item
+            a(href=require(`../../img/szafy/${n}.jpg`) data-size="900x900" class="carousel__item__link")
+              img(src=require(`../../img/szafy/${n}.jpg`) class="img-responsive carousel__img" alt=`Szafa-${n}`)
+              - n++
+
 block footer
+  include ../includes/footer

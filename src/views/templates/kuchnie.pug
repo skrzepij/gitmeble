@@ -1,0 +1,45 @@
+//- Page kuchnie.pug
+extends ../layout
+
+block vars
+  - var id = "kuchnie"
+  - var title = "Kuchnie na wymiar"
+  - var pageTitle = "Kuchnie na wymiar"
+  - var pageDesc = "Oferujemy kuchnie na wymiar"
+
+block append header
+  - locals.path= id;
+  include ../includes/header
+
+block append content
+  .main__content.kitchens
+    .row
+      .col-sm-6
+        .main__header.text-uppercase.text-center
+          h2
+            | Kuchnie na wymiar
+        .main__copy.text-center
+          p
+            | Zabudowa kuchenna to najlepszy sposób by w pełni zagospodarowaćprzestrzeń w każdym pomiejszczeniu, bez względu na jego powierzchnię.
+            | Innowacyjne rozwiązania dostępne na rynku dodająkuchni stylu, elegancji i co najważniejsze - praktyczności.
+          p
+            | Różnego rodzaju kosze, Cargo i szuflady zapewniają idealny porządek w kuchni, a szeroki wybór frontów,
+            | uchwytów i blatów nietuzinkowy i jedyny w swoim rodzaju wygląd - Twój wygląd.
+          p
+            | W każdej kuchni na wymiar szczególną uwagę zwracam na dobrze dopasowany projekt do potrzeb klienta i najwyższą jakość wykonania.
+            | Udzielam także kilkuletniej gwarancji.
+
+      .col-sm-6
+        .main__carousel__big
+          img(src=require("../../img/kuchnie/1.jpg") class="img-responsive" alt="" id="carouselBig")
+    .carousel__row
+      ul.carousel__list.list-unstyled#carouselList
+        - var n = 1
+        while n <= 23
+          li.carousel__item
+            a(href=require(`../../img/kuchnie/${n}.jpg`) data-size="900x900" class="carousel__item__link")
+              img(src=require(`../../img/kuchnie/${n}.jpg`) class="img-responsive carousel__img" alt=`Kuchnia-${n}`)
+              - n++
+
+block footer
+  include ../includes/footer

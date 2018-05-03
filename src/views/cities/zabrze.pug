@@ -1,0 +1,30 @@
+//- Page index.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Zabrze"
+  - var pageDesc = "Opis strony Zabrze"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+
+block append content
+  .main__content.city
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+          | Zabrze
+        .main__copy.text-center
+          p
+
+      .col-sm-4
+        .main__map
+
+block footer
+  include ../includes/footer
+
+

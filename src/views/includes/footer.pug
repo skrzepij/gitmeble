@@ -1,10 +1,14 @@
-.footer__cities
+.footer__cities.text-center
   h5.footer__cities__header
     | Znajdź nas w swoim mieście
-  ul.footer__cities__list
+  .footer__cities__content
+    include ../components/cities-list
 
 .footer__brands
+  .footer__brands__content
+    include ../components/logos-list
 
-.footer__copyrights
+.footer__copyrights.text-center
   p.
-    Git Meble na wymiar 2014-2016. Website created by #[a(href="http://upco.re") UpCore].
+    Git Meble na wymiar 2014-2018. Website created by #[a(href="http://upco.re" target="_blank") UpCore].
+    All rights reserved. SEO by #[a(href="http://intoseo.pl" target="_blank") Intoseo Pozycjonowanie]
