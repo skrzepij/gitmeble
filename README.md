@@ -32,7 +32,7 @@ Changelog in brief:
 
 ## Develop ##
 
-If you want to work on this project, remember to DO NOT edit files in `dist` folder. Changes should be made ONLY IN `src` folder.
+If you want to work on this project, remember to DO NOT edit files in `dist` folder. Changes should be made ONLY IN `src` folder. And I recommend to make changes in developer mode (run `npm run dev`)
 
 If you need to:
 * Change markup (html) -> Edit proper `.PUG` file in `src > views` folder
