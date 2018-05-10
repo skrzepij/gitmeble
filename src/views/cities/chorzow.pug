@@ -1,0 +1,53 @@
+//- Page chorzow.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Chorzów"
+  - var pageDesc = "Opis strony Chorzów"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+
+block append content
+  .main__content.city
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+            | Szafy, kuchnie i meble na wymiar Chorzów
+        .main__copy.text-center
+          p.
+            Klientom z miasta Chorzów zapewniam kompleksową obsługę i dostarczam zabudowę zawsze indywidualnie dopasowaną oraz w przystępnych cenach.
+            Wykonuję meble na wymiar, które wykańczam dokładnie według życzeń zleceniodawców i dbam o najdrobniejsze szczegóły.
+          p.
+            Oferuję różnego typu szafy na wymiar, do których konstrukcji wykorzystuję tylko sprawdzone materiały oraz akcesoria znanych firm.
+            Klientom, którzy zamawiają u mnie szafy wnękowe oraz garderoby, prezentuję pełną paletę dodatków do wyboru takich jak koszyki,
+            drążki, stelaże na deski do prasowania, akcesoria do odkurzacza, specjalne wieszaki, oświetlenie LED.
+          p.
+            Zapewniam darmową wycenę i pobieram wymiary bez dodatkowych opłat.
+            Zlecenia wykonuję zawsze w krótkich terminach i jestem elastyczny, dlatego otrzymują Państwo dopasowaną indywidualnie obsługę. Zapraszam!
+        include  ../components/appointment
+        .main__footer.img-centered
+          img(src=require("../../img/warehouse.jpg") class="img-responsive")
+      .col-sm-4
+        .main__address
+          h4.text-center.
+            GITMEBLE CHORZÓW
+          p
+            | GITMEBLE Chorzów 41-500
+            br
+            | TELEFON: #[a(href="tel:533880880") 533-880-880]
+            br
+            | e-mail: #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            br
+            | WWW: #[a(href="http://www.git-meble.pl/chorzow.html") http://www.git-meble.pl/chorzow.html]
+        .main__map
+          img(src=require("../../img/map.png") class="img-responsive" alt="Mapa obsługiwanych miejscowości")
+
+block footer
+  include ../includes/footer
+
+

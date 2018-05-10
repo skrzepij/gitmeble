@@ -1,0 +1,54 @@
+//- Page rybnik.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Rybnik"
+  - var pageDesc = "Opis strony Rybnik"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+
+block append content
+  .main__content.city
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+            | Szafy, kuchnie oraz meble na wymiar Rybnik
+        .main__copy.text-center
+          p.
+            Oferuję wysokiej jakości meble na wymiar i zapewniam moim klientom zawsze pełną obsługę.
+            Usługi świadczę na terenie aglomeracji śląskiej, w tym dla klientów z miasta Rybnik – dojeżdżam na miejsce, pobieram wymiary i służę fachowymi poradami.
+          p.
+            Moja specjalność to meble kuchenne i szafy na wymiar. Skonstruuję dla Państwa indywidualnie dobrane szafy wnękowe z pełnym wyposażeniem,
+            aby przechowywanie w nich przedmiotów było jeszcze prostsze. Wykonuję także garderoby oraz innego typu zabudowę na wymiar.
+            Bazuję na wysokiej klasie materiałach i akcesoriach meblowych, kładę nacisk na detale,
+            dlatego wykonana przeze mnie zabudowa spełni oczekiwania nawet najbardziej wymagającego klienta.
+            Zapewniam też konkurencyjne ceny na terenie Górnego Śląska.
+          p.
+            Pomiary i wycena za darmo – zapraszam serdecznie do skorzystania z mojej oferty klientów z Rybnika!
+        include  ../components/appointment
+        .main__footer.img-centered
+          img(src=require("../../img/warehouse.jpg") class="img-responsive")
+      .col-sm-4
+        .main__address
+          h4.text-center.
+            GITMEBLE RYBNIK
+          p
+            | GITMEBLE RYBNIK 44-200
+            br
+            | TELEFON: #[a(href="tel:533880880") 533-880-880]
+            br
+            | e-mail: #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            br
+            | WWW: #[a(href="http://www.git-meble.pl/rybnik.html") http://www.git-meble.pl/rybnik.html]
+        .main__map
+          img(src=require("../../img/map.png") class="img-responsive" alt="Mapa obsługiwanych miejscowości")
+
+block footer
+  include ../includes/footer
+
+

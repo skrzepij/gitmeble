@@ -1,0 +1,54 @@
+//- Page piekary-slaskie.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Piekary Śląskie"
+  - var pageDesc = "Opis strony Piekary Śląskie"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+
+block append content
+  .main__content.city
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+            | Szafy, kuchnie i meble na wymiar Piekary Śląskie
+        .main__copy.text-center
+          p.
+            Wykonuję wysokiej jakości meble na wymiar w przystępnych cenach. Obsługuję głównie klientów z Górnego Śląska, w tym z miasta Piekary Śląskie – dojeżdżam na miejsce,
+            pobieram wymiary i przygotowuję wycenę za darmo!
+          p.
+            Wykonuję zabudowę kuchenną i szafy na wymiar do każdego pomieszczenia – zarówno do domów, jak i do firm.
+            To szafy wnękowe oraz wolnostojące, które wykańczam według życzeń klientów w dodatkowe akcesoria, na przykład kosze,
+            wieszaki, akcesoria do przechowywania desek do prasowania, odkurzaczy, także praktyczne oświetlenie LED. Zabudowuję także garderoby.
+            Jeżeli potrzebują Państwo profesjonalnej obsługi w przypadku nietypowej zabudowy, również jestem do dyspozycji.
+            Zawsze doradzę i zaprezentuję najbardziej korzystne rozwiązania, aby gotowy produkt spełnił wszystkie Państwa oczekiwania.
+          p.
+            Zapraszam do skorzystania z mojej oferty!
+        include  ../components/appointment
+        .main__footer.img-centered
+          img(src=require("../../img/warehouse.jpg") class="img-responsive")
+      .col-sm-4
+        .main__address
+          h4.text-center.
+            GITMEBLE PIEKARY ŚLĄSKIE
+          p
+            | GITMEBLE Piekary Śląskie 41-940
+            br
+            | TELEFON: #[a(href="tel:533880880") 533-880-880]
+            br
+            | e-mail: #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            br
+            | WWW: #[a(href="http://www.git-meble.pl/piekary-slaskie.html") http://www.git-meble.pl/piekary-slaskie.html]
+        .main__map
+          img(src=require("../../img/map.png") class="img-responsive" alt="Mapa obsługiwanych miejscowości")
+
+block footer
+  include ../includes/footer
+
+

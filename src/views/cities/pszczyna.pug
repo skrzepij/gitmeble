@@ -1,0 +1,44 @@
+//- Page pszczyna.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Pszczyna"
+  - var pageDesc = "Opis strony Pszczyna"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+
+block append content
+  .main__content.city
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+            | Szafy, kuchnie i meble na wymiar Częstochowa
+        .main__copy.text-center
+          include ../components/placeholder-unsupported-city
+        include  ../components/appointment
+        .main__footer.img-centered
+          img(src=require("../../img/warehouse.jpg") class="img-responsive")
+      .col-sm-4
+        .main__address
+          h4.text-center.
+            GITMEBLE Pszczyna
+          p
+            | GITMEBLE Pszczyna 43-200
+            br
+            | TELEFON: #[a(href="tel:533880880") 533-880-880]
+            br
+            | e-mail: #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            br
+            | WWW: #[a(href="http://www.git-meble.pl/pszczyna.html") http://www.git-meble.pl/pszczyna.html]
+        .main__map
+          img(src=require("../../img/map.png") class="img-responsive" alt="Mapa obsługiwanych miejscowości")
+
+block footer
+  include ../includes/footer
+
+

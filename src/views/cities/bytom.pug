@@ -1,0 +1,55 @@
+//- Page bytom.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Bytom"
+  - var pageDesc = "Opis strony Bytom"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+
+block append content
+  .main__content.city
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+            | Szafy i meble na wymiar Bytom
+        .main__copy.text-center
+          p.
+            Wykonuję szafy na wymiar w atrakcyjnych cenach, obsługuję klientów głównie na terenie Górnego Śląska.
+            Bytom to jedna z miejscowości, do której dojeżdżam i za darmo pobieram wymiary i przygotowuję wycenę.
+            Jeżeli chcą Państwo zlecić zabudowę garderoby, wnęki czy zbudowanie mebli wolnostojących, jestem zawsze do dyspozycji!
+          p.
+            Każdy mebel wykonany przeze mnie jest starannie dopracowany, trwały i wygodny w użyciu.
+            Wyposażam szafy wnękowe i garderoby w praktyczne akcesoria – kosze, wieszaki, dodatki do przechowywania sprzętów domowych,
+            oświetlenie LED. Jestem w stanie wykonać zabudowę idealnie według życzeń zleceniodawców w dobranym kolorze oraz wzorze,
+            aby pasowała ona do wnętrza. Także służę pomocą w przypadku zleceń nietypowych.
+            Moi klienci zawsze otrzymują fachowe porady i miłą obsługę na najwyższym poziomie.
+          p.
+            Zapraszam do skorzystania z moich usług!
+        include  ../components/appointment
+        .main__footer.img-centered
+          img(src=require("../../img/warehouse.jpg") class="img-responsive")
+      .col-sm-4
+        .main__address
+          h4.text-center.
+            GITMEBLE BYTOM
+          p
+            | GITMEBLE Bytom 41-900
+            br
+            | TELEFON: #[a(href="tel:533880880") 533-880-880]
+            br
+            | e-mail: #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            br
+            | WWW: #[a(href="http://www.git-meble.pl/bytom.html") http://www.git-meble.pl/bytom.html]
+        .main__map
+          img(src=require("../../img/map.png") class="img-responsive" alt="Mapa obsługiwanych miejscowości")
+
+block footer
+  include ../includes/footer
+
+
