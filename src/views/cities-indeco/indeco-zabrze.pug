@@ -1,0 +1,38 @@
+//- Page indeco-zabrze.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Zabrze"
+  - var pageDesc = "Opis strony Indeco Zabrze"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Zabrze
+        .main__copy.text-center
+          p.
+            Firma Git-Meble współpracuje z Indeco. Dzięki temu partnerstwu możliwe jest wykonanie dla klientów z Zabrza
+            i okolic wszelkich rodzajów szaf oraz zabudowań wnęk w systemie Indeco. Oferujemy ogromny wybór profili,
+            systemów drzwi oraz wypełnień szaf zgodnych z najnowszymi trendami we współczesnym wzornictwie i aranżacji.
+            Stawiamy na profesjonalizm i wysoką jakość, która jest potwierdzona licznymi certyfikatami i nagrodami,
+            także na arenie międzynarodowej, jakie ma na swoim koncie Indeco. Każde pomieszczenie wymaga innych rozwiązań,
+            często bardzo indywidualnych i ściśle dopasowanych do przestrzeni oraz wymagań i osobistych preferencji klientów.
+            Biorąc to pod uwagę, firma Git-Meble proponuje rzetelną i kompleksową ofertę – od pomiaru i projektu aż do montażu.
+            Niezależnie od tego czy potrzebują Państwo specjalnych drzwi do garderoby czy może przesuwnej szafy w biurze,
+            wspólnie podołamy każdemu wyzwaniu i dopasujemy odpowiednie meble do stylu różnorodnych, nawet najtrudniejszych do zagospodarowania, wnętrz.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

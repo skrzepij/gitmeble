@@ -1,0 +1,34 @@
+//- Page indeco-dabrowa-gornicza.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Dąbrowa Górnicza"
+  - var pageDesc = "Opis strony Indeco Dąbrowa Górnicza"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Dąbrowa Górnicza
+        .main__copy.text-center
+          p.
+            Jeśli jesteś mieszkańcem Dąbrowy Górniczej to również świadczymy usługi Indeco w Twoim mieście.
+            Każda kuchnia musi mieć swój indywidualny charakter i styl, jak również posiadać rozwiązania, które ułatwią codzienne funkcjonowanie.
+            Meble kuchenne, które proponuje są projektowane na indywidulane potrzeby klientów, dostosowane do możliwości lokalowych i innych uwarunkowań.
+            W swojej ofercie posiadam również szafy na wymiar wykonywane zgodne z projektem klienta.
+            Meble, które wykonuje mają ciekawą stylistykę, dopasowaną do stylu całego mieszkania, wykonane są dobrej jakości materiałów oraz mają przystępną cenę.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

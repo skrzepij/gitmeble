@@ -1,0 +1,37 @@
+//- Page indeco-myslowice.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Mysłowice"
+  - var pageDesc = "Opis strony Indeco Mysłowice"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Mysłowice
+        .main__copy.text-center
+          p.
+            Firma Git-Meble współpracuje z marką Indeco i oferuje swoim klientom z Mysłowic oraz okolic szeroką ofertę unikalnych szaf wykonywanych na wymiar,
+            które są tworzone zgodnie z zastosowaniem rozwiązania przesuwnych drzwi systemowych.
+            Różnorodne fronty, wypełnienia i systemy pozwalają na dogodne dopasowanie wyglądu,
+            funkcjonalności i wnętrza mebli do Państwa osobistych gustów i oczekiwań. Szafy z przesuwanymi drzwiami mają wiele zalet,
+            przede wszystkim pozwalają na wygodne przechowywanie wszystkich potrzebnych rzeczy, ale też mogą być doskonałym zagospodarowaniem nieużywanych dotąd wnęk.
+            Co więcej, sprawdzają się nawet w małych pomieszczeniach, ponieważ nie wymagają tyle miejsca co standardowe szafy.
+            Nasze meble cechuje najwyższa jakość, dbałość o precyzyjne i profesjonalne wykonanie oraz wykorzystywanie najlepszych materiałów.
+            Służymy pomocnymi radami i uwzględniamy każde życzenia naszych klientów, aby w ten sposób każdego dnia tworzyć idealne meble, które spełniają każde oczekiwania.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

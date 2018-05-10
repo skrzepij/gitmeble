@@ -1,0 +1,36 @@
+//- Page indeco-sosnowiec.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Sosnowiec"
+  - var pageDesc = "Opis strony Indeco Sosnowiec"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Sosnowiec
+        .main__copy.text-center
+          p.
+            Klienci z Sosnowca i okolic, którzy wybierają firmę Git-Meble mają szansę, aby skorzystać z oferty naszego partnera, marki Indeco.
+            W ramach tej współpracy oferujemy Państwu różnorodne szafy, które są tworzone zgodnie z rozwiązaniem przesuwnych drzwi systemowych Indeco.
+            Nie ulega wątpliwości, że szafy są niezbędnym meblem w każdym domu lub miejscu pracy i niezwykle ułatwiają nam codzienne funkcjonowanie i organizowanie oraz porządkowanie przestrzeni dookoła nas.
+            Aby wyjść naprzeciw wymaganiom wszystkich klientów proponujemy szafy do różnorodnych typów pomieszczeń.
+            Szeroki wybór różnych profili, wypełnień i systemów, pozwala na indywidualne dopasowanie mebla do Państwa oczekiwań i pomysłów, a także do ogólnej estetyki wnętrza.
+            W swojej codziennej pracy stawiamy na wysoką jakość, najlepsze materiały i surowce oraz dostosowanie się do koncepcji klientów.
+            Gwarancją naszego doświadczenia są liczne udane realizację i wiele zadowolonych osób, które miały okazję korzystać z usług firmy Git-Meble.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

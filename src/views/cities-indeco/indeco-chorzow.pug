@@ -1,0 +1,38 @@
+//- Page indeco-chorzow.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Chorzów"
+  - var pageDesc = "Opis strony Indeco Chorzów"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Chorzów
+        .main__copy.text-center
+          p.
+            Klienci z Chorzowa i okolic mogą skorzystać również z oferty partnera firmy Git-Meble – marki Indeco.
+            Dzięki tej współpracy pragniemy zaoferować Państwu unikalne szafy na wymiar tworzone zgodnie z indywidualnymi
+            pomysłami i projektami oraz dopasowane do każdego, nawet najbardziej wymagającego, wnętrza.
+            Przesuwne szafy to dobre rozwiązanie w wielu pomieszczeniach – sypialni, garderobie czy przedpokoju.
+            Dzięki temu typowi mebli zyskujemy przede wszystkim funkcjonalne zagospodarowanie naszej domowej lub biurowej przestrzeni.
+            Oprócz walorów praktycznych, takie szafy spełniają również funkcję estetyczną i bywają doskonałym oraz stylowym uzupełnieniem aranżacji wnętrza.
+            Szafy tworzymy zgodnie z wymogami pomieszczenia, ale też kierując się sugestiami i wizją naszych klientów.
+            Jesteśmy gotowi na udzielenie wszelkich porad i cennych wskazówek na każdym etapie realizacji.
+            Nasze meble cechuje najwyższa jakość i profesjonalne wykonanie. Tworzymy meble, które są mocne, trwałe i z pewnością posłużą Państwu przez długi czas.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

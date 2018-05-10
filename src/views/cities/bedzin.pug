@@ -1,0 +1,54 @@
+//- Page bedzin.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Będzin"
+  - var pageDesc = "Opis strony Będzin"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+
+block append content
+  .main__content.city
+    .row
+      .col-sm-8
+        .main__header.text-uppercase.text-center
+          h2
+            | Szafy, kuchnie i meble na wymiar Będzin
+        .main__copy.text-center
+          p.
+            Wykonuję meble na wymiar zawsze najwyższej jakości i w pełni dopasowane do potrzeb klientów. Będzin to jedno z miast,
+            w którym oferuję kompleksową i fachową obsługę – pobieram pomiary i przygotowuję wycenę bez dodatkowych opłat!
+          p.
+            Specjalizuję się w produkcji mebli specjalnie według wymagań moich klientów.
+            Projektuję i konstruuję meble takie jak zabudowa kuchenna, szafy wnękowe, regały, biurka, garderoby i innego rodzaju,
+            przygotowując je dokładnie tak, aby zagospodarowały wyznaczoną przestrzeń i spełniły wszystkie wymagania użytkowników.
+            Wszystkie szafy na wymiar bazują na wysokiej jakości materiałach i akcesoriach, są wykończone w najdrobniejszych szczegółach.
+            Jestem także w stanie przygotować nietypowe zabudowy – zawsze doradzę i wskażę najbardziej korzystne rozwiązania.
+          p.
+            Zapraszam do skorzystania z mojej oferty!
+        include  ../components/appointment
+        .main__footer.img-centered
+          img(src=require("../../img/warehouse.jpg") class="img-responsive")
+      .col-sm-4
+        .main__address
+          h4.text-center.
+            GITMEBLE BĘDZIN
+          p
+            | GITMEBLE Będzin 42-500
+            br
+            | TELEFON: #[a(href="tel:533880880") 533-880-880]
+            br
+            | e-mail: #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            br
+            | WWW: #[a(href="http://www.git-meble.pl/bedzin.html") http://www.git-meble.pl/bedzin.html]
+        .main__map
+          img(src=require("../../img/map.png") class="img-responsive" alt="Mapa obsługiwanych miejscowości")
+
+block footer
+  include ../includes/footer
+
+

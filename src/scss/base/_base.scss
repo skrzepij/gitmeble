@@ -57,45 +57,11 @@ a:active {
   text-decoration: none;
 }
 
+strong {
+  font-family: 'Tahoma-Bold', sans-serif;
+  font-weight: 700;
+}
+
 button {
   background-color: $bg-gray;
-}
-
-.main {
-  background-image: url(../img/bg-wood.jpg);
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
-}
-
-.main__header {
-  h2 {
-    font-size: 1.2rem;
-    font-family: 'Tahoma-Regular', sans-serif;
-    font-weight: $normal;
-    margin: 10px 0 20px;
-  }
-}
-
-.main__content {
-  background-color: $bg-gray;
-  padding: 20px;
-  margin: 50px 0;
-  box-shadow: 0 5px 20px $black;
-  p {
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and ( min-width: 1200px ) {
-  .main__header {
-    h2 {
-      margin: 15px 0 40px;
-    }
-  }
-  .main__content {
-    p {
-      margin-bottom: 30px;
-    }
-  }
 }

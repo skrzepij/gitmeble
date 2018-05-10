@@ -1,15 +1,13 @@
 /*******
-##### IMPORT CUSTOM STYLES
-##### SMACSS METHODOLOGY
+##### Import styles parts
+##### SMACSS methodology
 **************/
-
 
 //BASE
 @import 'base/fonts';
 @import 'base/vars';
 @import 'base/mixins';
 @import 'base/base';
-
 
 //LAYOUT - divides a page into sections with elements like header, footer, and article.
 @import 'layout/header';
@@ -21,7 +19,7 @@
 @import 'module/buttons';
 @import 'module/search';
 @import 'module/gallery';
-
+@import 'module/appointment';
 
 //TEMPLATE - optional
-
+@import 'template/about';

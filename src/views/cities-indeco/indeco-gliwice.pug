@@ -1,0 +1,38 @@
+//- Page indeco-gliwice.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Gliwice"
+  - var pageDesc = "Opis strony Indeco Gliwice"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Gliwice
+        .main__copy.text-center
+          p.
+            Wszyscy klienci z Gliwic oraz okolic, którzy wybiorą firmę Git-Meble mogą również skorzystać z licznych rozwiązań jakie proponuje Indeco.
+            Oferujemy Państwu szeroką gamę różnego rodzaju szaf z ogromnym wyborem profili, systemów i wypełnień.
+            Tworzymy funkcjonalne szafy na wymiar do każdego pomieszczenia.
+            Duży wybór systemów drzwi pozwala na dopasowanie mebli nawet do najbardziej skomplikowanych architektonicznie zakamarków,
+            a materiały wysokiej jakości zapewniają trwałość i solidność wykonanych zamówień.
+            Ponadto, śledzenie najnowszych trendów we wzornictwie pozwala nam na dostosowanie mebli do każdego rodzaju wnętrz.
+            Oferujemy kompleksową usługę na każdym etapie – od pomiarów aż po montaż. Służymy również swoim doświadczeniem,
+            fachową pomocą i poradą, uwzględniając Państwa wizję i pomysły na zaaranżowanie przestrzeni w domu, biurze lub innym pomieszczeniu.
+            Gwarantujemy profesjonalną usługę na wysokim poziomie i stworzenie mebli zgodnych z każdymi oczekiwaniami oraz wyznaczonymi standardami.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

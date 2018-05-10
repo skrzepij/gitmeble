@@ -23,17 +23,30 @@ block append content
             | Wykonujemy realizacje mebli na wymiar, w tym szaf i kuchni na wymiar w systemie Indeco. Meble INDECO spełniają normy bezpieczeństwa oraz mają aprobatę
             | Centralnego Ośrodka Badawczo-Rozwojowego.
           p
-            | Realizujemy zlecenia zadaniowo: <br>
+            | Realizujemy zlecenia zadaniowo:
+            br
             | Pomiar -> Projekt -> Wycena -> Umowa -> Montaż
           p
-            | Umów sięna bezpłatny pomiar: <br>
-            | tel: #[a(href="tel:+48533880880") 533-880-880] <br>
+            | Umów się na pomiar:
+            br
+            | tel: #[a(href="tel:+48533880880") 533-880-880]
+            br
             | lub,
           p
-            | samodzielnie stwórz własny projekt TUTAJ, zrób zdjęcie i wyślij do wyceny <br>
-            | e-mail: #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            | Zrób to sam, krok po kroku:
+          ol.text-left
+            li.
+              Stworz projekt #[a(href="http://www.indeco.pl/estudio.html" target="_blank") TUTAJ].
+            li.
+              Zrób Print Screen ekranu na etapie 2.
+            li.
+              Zrób Print Screen ekranu na etapie 3.
+            li.
+              Wyślij zdjęcia na adres #[a(href="mailto:kontakt@gitmeble.pl") kontakt@gitmeble.pl]
+            li.
+              Masz problem? zadzwon #[a(href="tel:533880880") 533 880 880]
       .col-sm-4
-        img(src=require('../../img/laury.jpg') class="img-responsive")
+        include ../components/laurels
       .col-sm-3
         include ../components/indeco-cities-list
 

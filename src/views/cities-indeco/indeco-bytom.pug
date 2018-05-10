@@ -1,0 +1,38 @@
+//- Page indeco-bytom.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Bytom"
+  - var pageDesc = "Opis strony Indeco Bytom"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Bytom
+        .main__copy.text-center
+          p.
+            Firma Git-Meble współpracuje z Indeco, więc klienci z Bytomia i okolic mogą dzięki temu skorzystać z oferty partnera.
+            W jej ramach proponujemy szeroki wybór różnego rodzaju szaf, które są wykonywane zgodnie z patentem rozsuwanych drzwi Indeco.
+            Doskonale zdajemy sobie sprawę, że każde pomieszczenie, w domu lub w biurze, wymaga odrębnych rozwiązań wnętrzarskich,
+            więc oferujemy szafy doskonale dopasowane do różnego typu pokojów lub kuchni. Przesuwane szafy są bardzo popularne,
+            gdyż jest to świetny sposób na zagospodarowanie wolnej przestrzeni w praktyczny i funkcjonalny sposób.
+            Co więcej, ich design i wzornictwo może podkreślić wygląd całego wnętrza. Dzięki temu, że tworzymy meble na wymiar,
+            które uwzględniają indywidualne wymagania, projekty i pomysły naszych klientów, jesteśmy w stanie zadowolić nawet najbardziej wymagające osoby.
+            Ze swojej strony możemy zagwarantować Państwu doświadczenie, które jest poparte licznymi udanymi realizacjami,
+            najwyższą jakość materiałów i profesjonalne wykonanie powierzonych nam zleceń.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

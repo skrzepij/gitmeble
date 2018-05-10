@@ -1,0 +1,35 @@
+//- Page indeco-zory.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Żory"
+  - var pageDesc = "Opis strony Indeco Żory"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Żory
+        .main__copy.text-center
+          p.
+            Zapraszamy klientów z Żor do współpracy. Żory jest miastem, które również obsługujemy w zakresie współpracy z Indeco.
+            Tworzenie to moja pasja, a ponieważ najbardziej pasjonują mnie rzeczy użytkowe, moim klientom proponuje szafy i kuchnie na wymiar.
+            Gwarantuje projekt dostosowany do indywidulanych potrzeb, funkcjonalność jak i ciekawe rozwiązania stylistyczne i co ważne konkurencyjne ceny.
+            Serdecznie zapraszam do zapoznania się z moją ofertą i do kontaktu.
+            Do każdego zlecenie podchodzę z dużym zaangażowaniem i troską o każdy szczegół, chętnie również służ radą i wparciem na każdym etapie zakupów.
+            Szukając sprawdzonych rozwiązań- warto mi zaufać!
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+

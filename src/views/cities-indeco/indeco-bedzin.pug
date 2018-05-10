@@ -1,0 +1,37 @@
+//- Page indeco-bedzin.pug
+extends ../layout
+
+block vars
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Indeco Będzin"
+  - var pageDesc = "Opis strony Indeco Będzin"
+
+block append header
+  - locals.path= pageTitle;
+  include ../includes/header
+
+block append content
+  .main__content.city-indeco
+    .row
+      .col-sm-8
+        .main__header.text-center
+          h2
+            | Indeco Będzin
+        .main__copy.text-center
+          p.
+            Firma Git-Meble współpracuje z marką Indeco, więc klienci z Będzina i okolic mogą skorzystać z oferty partnera,
+            w której ramach proponujemy wykonanie unikalnych przesuwanych szaf na wymiar. Indeco to gwarancja jakości,
+            która jest potwierdzona licznymi certyfikatami i nagrodami oraz uznaniem i zaufaniem wielu setek klientów.
+            Oferujemy Państwu szeroki wybór części składowych mebla, dzięki czemu z łatwością można zrealizować swój własny pomysł na idealną szafę,
+            która będzie jednocześnie użyteczna oraz stylowa. Nasze usługi są pełne i kompleksowe – od dokładnych pomiarów aż do profesjonalnego montażu.
+            Proponujemy funkcjonalne szafy dostosowane do różnego typu pomieszczeń, nawet tych, które wydają się trudne do zagospodarowania,
+            czy to w domu czy w innych przestrzeniach. Ze swojej strony gwarantujemy najwyższą jakość wykonania, troskę o najlepsze materiały,
+            dbałość o każdy, nawet najdrobniejszy, szczegół, elastyczność oraz pełne dostosowanie do indywidualnych wymagań i preferencji naszych klientów.
+        include  ../components/appointment
+      .col-sm-4
+        include ../components/laurels
+
+block footer
+  include ../includes/footer
+
+
