@@ -31,11 +31,11 @@ block append content
         include  ../components/appointment
       .col-sm-6
         .main__carousel__big
-          img(src=require("../../img/kuchnie/1.jpg") class="img-responsive" alt="" id="carouselBig")
+          img(src=require("../../img/kuchnie/60.jpg") class="img-responsive" alt="" id="carouselBig")
     .carousel__row
       ul.carousel__list.list-unstyled#carouselList
         - var n = 1
-        while n <= 23
+        while n <= 59
           li.carousel__item
             a(href=require(`../../img/kuchnie/${n}.jpg`) data-size="900x900" class="carousel__item__link")
               img(src=require(`../../img/kuchnie/${n}.jpg`) class="img-responsive carousel__img" alt=`Kuchnia-${n}`)

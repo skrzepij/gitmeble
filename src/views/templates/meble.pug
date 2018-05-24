@@ -1,0 +1,39 @@
+//- Page meble.pug
+extends ../layout
+
+block vars
+  - var id = "meble"
+  - var title = "Meble na wymiar"
+  - var pageTitle = "Meble na wymiar"
+  - var pageDesc = "Oferujemy meble na wymiar"
+
+block append header
+  - locals.path= id;
+  include ../includes/header
+
+
+block append content
+  .main__content.waredrobes
+    .row
+      .col-sm-6
+        .main__header.text-uppercase.text-center
+          h2
+            | Meble na wymiar
+        .main__copy.text-center
+          p.
+            Sekcja w trakcie przygotowania.
+        include  ../components/appointment
+      .col-sm-6
+        .main__carousel__big
+          img(src=require("../../img/meble/17.jpg") class="img-responsive" alt="" id="carouselBig")
+    .carousel__row
+      ul.carousel__list.list-unstyled#carouselList
+        - var n = 1
+        while n <= 36
+          li.carousel__item
+            a(href=require(`../../img/meble/${n}.jpg`) data-size="900x900" class="carousel__item__link")
+              img(src=require(`../../img/meble/${n}.jpg`) class="img-responsive carousel__img" alt=`Meble-${n}`)
+              - n++
+
+block footer
+  include ../includes/footer

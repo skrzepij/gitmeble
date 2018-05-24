@@ -101,10 +101,18 @@ const pluginsList = [
   new HtmlWebpackPlugin({
     title: 'Gitmeble',
     hash: true,
+    template: './src/views/templates/meble.pug',
+    filename: 'meble.html',
+    favicon: './src/favicon.png'
+  }),
+  new HtmlWebpackPlugin({
+    title: 'Gitmeble',
+    hash: true,
     template: './src/views/templates/indeco.pug',
     filename: 'indeco.html',
     favicon: './src/favicon.png'
   }),
+
   //CSS - extract to separate file
   new ExtractTextPlugin({
     filename: '[name].css',

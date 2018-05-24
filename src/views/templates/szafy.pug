@@ -35,11 +35,11 @@ block append content
         include  ../components/appointment
       .col-sm-6
         .main__carousel__big
-          img(src=require("../../img/szafy/1.jpg") class="img-responsive" alt="" id="carouselBig")
+          img(src=require("../../img/szafy/26.jpg") class="img-responsive" alt="" id="carouselBig")
     .carousel__row
       ul.carousel__list.list-unstyled#carouselList
         - var n = 1
-        while n <= 25
+        while n <= 42
           li.carousel__item
             a(href=require(`../../img/szafy/${n}.jpg`) data-size="900x900" class="carousel__item__link")
               img(src=require(`../../img/szafy/${n}.jpg`) class="img-responsive carousel__img" alt=`Szafa-${n}`)

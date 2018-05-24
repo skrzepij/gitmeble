@@ -17,10 +17,6 @@ header {
   max-width: 100%;
   display: flex;
   justify-content: space-around;
-
-  li {
-    width: 33.333%;
-  }
 }
 
 .header__info {
@@ -31,6 +27,7 @@ header {
   }
   .info__item {
     padding: 10px;
+    width: 33.333%;
   }
 }
 
@@ -47,6 +44,22 @@ header {
   }
   .nav__item {
     padding: 15px 10px;
+    width: 25%;
+  }
+}
+
+@media screen and ( max-width: 420px ) {
+  .header__info {
+    font-size: 1.2rem;
+  }
+  .header__nav {
+    .nav__list {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav__item {
+      width: 50%;
+    }
   }
 }
 
