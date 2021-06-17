@@ -2,9 +2,6 @@
 
 New version of the webpage.
 
-Work in progress..
-
-
 ### Whats change? ###
 
 Basically - everything.
